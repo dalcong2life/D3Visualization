@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 Visualization</title>
+    <!--<link rel="icon" href="../img/favicon.ico" type="image/x-icon">-->
+    <script src="../libs/remark/out/remark.min.js"></script>
+    <script src="../libs/d3/d3.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "Nanum Gothic";
+            src: url('../fonts/NanumBarunGothic.eot');
+            src: url('../fonts/NanumBarunGothic.ttf');
+            src: url('../fonts/NanumBarunGothic.woff');
+        }
+        body {
+            font-family: "Nanum Gothic", "sans-serif", tahoma;
+        }
+
+        h1, h2, h3 {
+            font-family: "Nanum Gothic", "sans-serif", tahoma;
+            font-weight: normal;
+        }
+
+        .remark-code, .remark-inline-code {
+            font-family: 'Ubuntu Mono';
+        }
+
+        .red {
+            color: #f00;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+
+
+
+    var slideShow = remark.create({
+        ratio: '4:3',
+
+        navigation: {
+            scroll: false
+        },
+
+        sourceUrl: 'html/slide0.md',
+        highlightLanguage: 'javascript',
+        highlightStyle: 'monokai',
+        highlightLines: true,
+        highlightSpans: true
+    })
+
+    remark.macro.test = function (test) {
+        return test + 'aaaa';
+    };
+</script>
+</body>
+</html>
