@@ -1,16 +1,12 @@
-class: middle, center
 
-# Centered vertically and horizontally
+background-image: url(img/r21.png)
+class: center
 
-- virtically
-● top(default)
-● middle
-● bottom
+# D3를 활용한 데이터 시각화
 
-- horizontally
-● left(default)
-● center
-● right
+<div id="main"></div>
+
+
 
 ---
 

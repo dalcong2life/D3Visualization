@@ -6,7 +6,10 @@ gulp.task('server', function () {
     return browserSync.init({
         server: {
             baseDir: 'src',
-            index: 'html/index.html'
+            index: 'html/index.html',
+            routes: {
+                'html': 'html'
+            }
         }
     })
 });
@@ -15,6 +18,8 @@ gulp.task('server', function () {
 gulp.task('watch', function () {
     console.log('watch task');
     gulp.watch('src/html/*.+(html|md)').on('change', reload);
+
+    gulp.watch('src/js/**/*.js').on('change', reload);
 });
 
 gulp.task('default', ['server', 'watch'], function () {
