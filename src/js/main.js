@@ -1,3 +1,7 @@
+remark.macros.scale = function (percentage) {
+    return '<img src="' + this + '" style="width: ' + percentage + '" />';
+};
+
 var slideShow = remark.create({
     ratio: '4:3',
 
@@ -15,33 +19,63 @@ var slideShow = remark.create({
 
 var getEl = document.getElementById.bind(document);
 
+var barchart = Chart.barchart();
+
 slideShow.on('beforeShowSlide', function (slide) {
-    console.log(window);
+    console.log(slide.getSlideIndex());
+
     switch (slide.getSlideIndex()) {
         case 0:
 
-            var barData = [1, 2, 3, 4, 5];
-            var barchart = Chart.barchart();
-
-            d3.select('main')
-                .data([barData])
-
-                .call(barchart);
-
 
             break;
+        case 13:
 
+            var addBarchartData = function (data, len) {
+                for (var i = len - 1; i >= 0; i--) {
+                    data.push(Math.floor(Math.random() * 100) + 1);
+                }
+                return data;
+            };
+
+            var dataset = addBarchartData([], 15);
+            console.log(dataset);
+
+            d3.select('#barchar01')
+                .data([dataset])
+                .call(barchart);
+
+            break;
         default :
             console.log('default');
     }
 });
 
+slideShow.on('hideSlide', function (slide) {
+    console.log('Hide Slide: ', slide.getSlideIndex());
 
-// 초기화
-var barchart = Chart.barchart();
-var bardata = [10, 20, 30, 40, 50];
+    switch (slide.getSlideIndex()) {
+        case 13:
+            document.querySelector('#barchar01')
+                .innerHTML = '';
+            break;
+    }
 
-console.log(d3.select('#main'));
-d3.select('#main')
-    .data([bardata])
+
+});
+
+
+var addBarchartData = function (data, len) {
+    for (var i = len - 1; i >= 0; i--) {
+        data.push(Math.floor(Math.random() * 100) + 1);
+    }
+    return data;
+};
+
+
+var dataset = addBarchartData([], 15);
+console.log(dataset);
+
+d3.select('#barchar01')
+    .data([dataset])
     .call(barchart);
