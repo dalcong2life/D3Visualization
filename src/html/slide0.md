@@ -1,13 +1,16 @@
-background-image: url(img/main.png)
+
+
+
 class: center
 
-<div style="padding-top: 40px;">
-<h3><b>D3를 활용한 데이터 시각화 방법</b></h3>
-</div>
+<p>
+<span class="title">D3를 활용한 데이터 시각화 방법</span>
+<br/>
+</p>
 
 ---
 
-## <b>목차</b>
+## 목차
 
 ### 1. 데이터 시각화란
 ### 2. 데이터 시각화의 종류
@@ -15,34 +18,46 @@ class: center
 ### 4. 시각화에서 자주하는 실수들
 ### 5. D3 기본
 
-
 ---
 
 class: middle, center
+
 
 # 1. 데이터 시각화란
 
-
 ---
 
-class: middle, center
-
-<h2>"데이터 시각화는 인지의 강화를 위해  
-시각적인 정보의 수용을 이용하는    
-데이터의 묘사나 표현하는 방식이다."</h2>
-.right[\- 앤디 커크(Data Visualization: A successful design process)]
-
-
----
 
 class: middle, center
 
 
-<h2>
-"데이터 시각화의 주 목적은 정보를   
-명료하고 효과적으로 소통할 수 있도록  
-데이터를 나타내는 것이다."</h2>
-.right[\- 비탈리 프리드먼(Vitaly Friedman)]
+<p class="highlight">
+❝<br>
+데이터 시각화(Data Visualization)는<br> 
+데이터 분석 결과를 쉽게 이해할 수 있도록<br> 
+시각적으로 표현하고 전달되는 과정을 말한다.<br>
+❞<br>
+<span style="display:block;text-align:right;margin-right:80px;font:0.6em normal;">
+- wikipedia
+</span>
+</p>
+
+
+---
+
+class: middle, left
+
+### 데이터 시각화가 시작된 시기
+
+<p>
+<img style="width:100%" src="../img/Screenshot1.png">
+<span style="display:block;text-align:right;margin-right:60px;font:0.6em normal;">
+- 구글 N그램 뷰어
+</span>
+</p>
+
+
+
 
 ---
 
