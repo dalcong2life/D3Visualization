@@ -11,7 +11,7 @@ var slideShow = remark.create({
 
     sourceUrl: 'html/slide0.md',
     highlightLanguage: 'javascript',
-    highlightStyle: 'monokai',
+    highlightStyle: 'zenburn',
     highlightLines: true,
     highlightSpans: true
 });
