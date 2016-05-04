@@ -7,7 +7,8 @@
 
 
     <script src="../libs/remark/out/remark.min.js"></script>
-    <script src="../libs/d3/d3.min.js"></script>
+    <!--<script src="../libs/d3/d3.min.js"></script>-->
+    <script src="https://d3js.org/d3.v4.0.0-alpha.35.min.js"></script>
 
 
     <style>
@@ -172,6 +173,30 @@
             font-weight: bold;
         }
 
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        table {
+            width: 100%;
+        }
+
+        th {
+            background-color: #eee;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        td:nth-child(1) {
+            text-align: center;
+        }
+
+
 
 
     </style>
@@ -180,6 +205,7 @@
 
 <!-- Chart list -->
 <script src="../js/chart/barchart.js"></script>
+<script src="../js/chart/force-chart.js"></script>
 
 
 <script src="../js/main.js"></script>

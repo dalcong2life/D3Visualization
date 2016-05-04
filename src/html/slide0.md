@@ -145,12 +145,9 @@ class: middle, center
 
 ---
 
-
-
 class: middle, center
 
 ## 2. 데이터 시각화의 종류
-
 
 ---
 
@@ -190,17 +187,18 @@ class: middle, center
 
 ### 탐색 도구
 <p>
-- 데이터 셋을 직접 탐색해 보고 의미를 파악할 수 있는 도구를 제공 
+- 데이터 셋을 직접 탐색해 보고 의미를 파악할 수 있는 상호작용 가능한 도구를 제공 
 </p>
 
 <p style="text-align:center">
-<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:637px;text-align:center;">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:607px;text-align:center;">
 <img style="width:100%" src="../img/gapminder.png">
 </span>
 </p>
 
-
+<span style="margin-left:70px">
 .footnote[http://www.gapminder.org/world/]
+</span>
 
 
 ---
@@ -228,46 +226,248 @@ class: middle, center
 
 ---
 
-- 꺽은선 그래프
-- 막대 그래프
-- 원 그래프
-- 도넛 그래프
+### 시각화에 영향을 주는 데이터 형식
+
+<table>
+<thead>
+<tr>
+    <th>데이터 형식</th>
+    <th>설명</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>
+        배열<br>
+        (레코드 등 표 형식으로 표현)
+        </td>
+        <td>
+        각 데이터는 복수의 속성값이 있으며 하나의 데이터는 한 줄로 표현</td>
+    </tr>
+    <tr>
+        <td>
+        그래프<br>
+        (트리 구조와 중첩 구조, 네트워크 등)</td>
+        <td>
+        노드(정점)와 노드를 잇는 에지(변)로 구성된다.<br>
+        에지에는 방향이 있는 것과 방향이 없는 것이 있다.<br>
+        노드 간의 관계는 인접행렬 등으로 표현되는 일이 많다.<br>
+         에지에는 그 관계성이 붙어 있는 것도 있다.
+        </td>
+    </tr>
+</tbody>
+</table>
+
+---
+
+### 배열 데이터를 표현하는 차트(그래프)
+
+- 막대그래프
+- 누적 막대그래프
+- 히스토그램
+- 퍼널 그래프
+- 꺾은선그래프
+- 평행형 / 방사형 차트
+- 영역형 그래프
+- 원그래프 / 도넛그래프
+- 상자 수염 그림
 - 산포도
-- 산키 차트
-- 포스 그래프
 - 산포도 행렬
+- 버블차트
+- 히트맵
+
+---
+
+### 막대그래프
+<p>
+- 같은 너비의 막대를 사용하여 높이로 데이터를 표현<br>
+- 데이터의 크기 비교에 적합<br>
+- 그리는 방식에 따라 막대를 세로 또는 가로로 그리는 경우가 있음<br>
+- 복수 계열을 표현할 경우 10개 이상 늘어나지 않도록 할 것<br>
+</p>
+
+<div id="bar-content"></div>
+
+---
+
+### 누적 막대그래프
+
+---
+
+### 히스토그램
+
+---
+
+### 퍼널 그래프
+
+---
+
+### 꺾은선그래프
+
+---
+
+### 평행형 / 방사형 차트
+
+---
+
+### 영역형 그래프
+
+---
+
+### 원그래프 /도넛그래프
+
+---
+
+### 상자 수염 그림
+
+---
+
+### 산포도
+<p>
+- X축과 Y축으로 두 데이터 사이의 관계성을 표현<br>
+- 상관관계 유무 등을 볼 수 있으므로 데이터의 기본적인 성질을 파악하는데 이용<br>
+</p>
+
+---
+
+### 산포도 행렬
+
+<p>
+- 산포도 자체를 매트릭스 형태로 배치하여 여러 변수의 관계성을 시각화<br>
+- 각각의 행과 열은 모두 다른 변수를 나타내며 교차하는 부분이 각 변수의 산포도로 표현<br>
+</p>
+
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:400px;text-align:center;">
+<img style="width:100%" src="../img/Scatter_Plot_Matrix.png">
+</span>
+</p>
+
+
+
+---
+
+### 버블차트
+
+<p>
+- 점을 원으로 그려 반지름으로 수치를 표현<br>
+- X축, Y축, 반지름으로 세 가지 수치 데이터 표현<br>
+</p>
+
+<div id="bubble-chart"></div>
+
+---
+
+### 히트맵
+
+<p>
+- 분포의 도수를 색으로 표현해서 위치 정보에 플롯한 시각화<br>
+- 어느 위치에서 도수가 높거나 낮은지를 한눈에 파악 가능<br>
+</p>
+
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:637px;text-align:center;">
+<img style="width:100%" src="../img/australia-heat-map.jpg">
+</span>
+</p>
+
+<span style="margin-left:60px">
+.footnote[http://wired.jp/2013/01/09/australia-temperature-map/]
+</span>
+
+---
+
+### 그래프 데이터를 표현하는 차트(그래프)
+
 - 트리맵
-- 버블 차트
+- 파티션 다이어그램
+- 산키 차트
+- 역학 그래프
+
+---
+
+### 트리맵(Treemap)
+
+<p>
+- 중첩 구조(트리 구조)로 된 계층적 데이터를 면접으로 표시한 차트<br>
+- 각각의 데이터가 전체에서 차지하는 비율을 구조적으로 확인 가능<br>
+</p>
+
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:537px;text-align:center;">
+    <img style="width:100%" src="../img/treemap.png"/>
+</span>
+</p>
+
+<span style="margin-left:100px">
+.footnote[http://hyukjunseo.egloos.com/m/3508960]
+</span>
+
+---
+
+### 파티션 다이어그램(Partition Diagram)
+
+<p>
+- 큰 카테고리에서부터 작은 항목으로 계층적 관계성과 양적 관계를 표시<br>
+- 관계성 파악을 위해서는 원 또는 방사형으로 양적인 관계 파악은 사각형 형태 선택<br>
+<p>
+
+
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:33%;float:left;">
+    <img style="width:100%" src="../img/circle-packing.png"/>
+    </span>
+    <span style="width:33%;float:left;">
+    <img style="width:100%" src="../img/zoomable-sunburst.png"/>
+    </span>
+    <span style="width:34%;float:left;">
+    <img style="width:100%" src="../img/partition.png"/>
+    </span>
+</span>
+</p>
+
+<span style="margin-left:0px">
+.footnote[http://bl.ocks.org/mbostock]
+</span>
+
+---
+
+### 산키 차트(Sankey Chart)
+
+<p>
+- 어디에서부터 어디로 향하는지에 대해 시각화<br>
+- 사용자의 흐름이나 이동을 표현<br>
+- 반복이 발생하거나 이동 패턴이 많이 존재하면 구조가 복잡해지는 단점<br>
+</p>
+
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:637px;text-align:center;">
+    <img style="width:100%" src="../img/sankey-chart.png"/>
+</span>
+</p>
+
+<span style="margin-left:45px">
+.footnote[https://esotech.com/blog/]
+</span>
 
 
 ---
 
-name: thought-starter
+### 역학 그래프(Force Directed Graph)
 
-.center[![:scale 100%](img/chart-suggestion-infographic.jpg)]
-
-
-
----
-### 막대 그래프
-
-- dfjsl
-- sdfjsdl
-
-
-
-<div id="barchar01" class="bottom center"></div>
-
-
+<div width="100%">
+<canvas id="force-chart" width="800" height="500"></canvas>
+</div>
 
 
 ---
 
-background-image: url(img/)
-# Slide with background image
-
-
-
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:737px;text-align:center;">
+    <img style="width:100%" src="../img/chart-suggestion-infographic.jpg"/>
+</span>
+</p>
 
 ---
 
@@ -353,9 +553,11 @@ class: middle, center
 ---
 
 
+
+---
 ### SVG 좌표 시스템
 
-<div>
+<div style="background-color:#eee;height:320px;">
 <svg width="100%" height="500">
     <circle cx="0" cy="0" r="10" />
     <line x1="0" y1="0" x2="0" y2="500" stroke-width="1.5" stroke="#000"/>
@@ -367,84 +569,258 @@ class: middle, center
 
 ### SVG 문서요소 - 사각형
 
+```xml
+<rect x="0" y="0" width="600" height="80"/>
+```
+<div style="background-color:#eee;height:300px;">
+<svg width="748">
+   <g width="700" transform="translate(25,60)">
+   <rect x="0" y="0" width="700" height="80"/>
+   </g>
+</svg>
+</div>
+
+---
+
+### SVG 문서요소 - 사각형
 
 ```xml
-<rect x="0" y="0" width="800" height="80" fill="red"/>
+<rect x="0" y="0" width="600" height="80" 
+                     fill="red" stroke="black" stroke-width="5px"/>
 ```
+<div style="background-color:#eee;height:300px;">
+<svg width="748">
+   <g width="700" transform="translate(25,60)">
+   <rect x="0" y="0" width="700" height="80" fill="red" stroke="black" stroke-width="5px"/>
+   </g>
+</svg>
+</div>
+---
 
-<p class="highlight" style="height:300px;">
-    <svg width="100%">
-    <rect x="0" y="0" width="800" height="80" fill="red" />
-    </svg>
+### SVG 문서요소 - 원
+
+```xml
+<circle cx="100" cy="100" r="100" 
+                      fill="blue" stroke="black" stroke-width="5px"/>
+```
+<div style="background-color:#eee;height:320px;">
+<svg width="748" height="500">
+   <g transform="translate(250,50)">
+   <circle cx="100" cy="100" r="100" fill="blue" stroke="black" stroke-width="5px"/>
+   </g>
+</svg>
+</div>
+---
+
+### SVG 문서요소 - 타원
+
+```xml
+<ellipse cx="100" cy="100" rx="200" ry="50" 
+                      fill="blue" stroke="black" stroke-width="5px"/>
+```
+<div style="background-color:#eee;height:320px;">
+<svg width="748" height="500">
+   <g transform="translate(250,50)">
+   <ellipse cx="100" cy="100" rx="200" ry="50" 
+                      fill="green" stroke="black" stroke-width="5px"/>
+   </g>
+</svg>
+</div>
+
+---
+
+### SVG 문서요소 - 선
+
+```xml
+<ellipse cx="100" cy="100" rx="200" ry="50" 
+                      fill="blue" stroke="black" stroke-width="5px"/>
+```
+<div style="background-color:#eee;height:320px;">
+<svg width="748" height="500">
+   <g transform="translate(100,50)">
+   <line x1="0" y1="0" x2="500" y2="200" 
+                      stroke="purple" stroke-width="5px"/>
+   </g>
+</svg> 
+</div>
+ 
+
+
+---
+
+### 척도(Scale)
+
+<p>
+- 입력되는 정의역(domain)과 출력되는 치역(range)을 매핑한 함수
+<br>
+<br>
+- 데이터 값을 시각화에 필요한 적절한 값(비율)로 매핑
 </p>
 
+<div style="background-color:#eee;height:320px;">
+<svg width="748" height="500">
+   <g transform="translate(100,100)">
+   <line x1="0" y1="0" x2="500" y2="0" stroke="black" />
+   <line x1="50" y1="100" x2="450" y2="100" stroke="black" />
+   <circle cx="0" cy="0" r="5"/>
+   <circle cx="250" cy="0" r="5"/>
+   <circle cx="500" cy="0" r="5"/>
+   <text x="0" y="20" font-size="15">100</text>
+   <text x="235" y="20" font-size="15">300</text>
+   <text x="490" y="20" font-size="15">500</text>
+   
+   <circle cx="50" cy="100" r="5"/>
+   <circle cx="250" cy="100" r="5"/>
+   <circle cx="450" cy="100" r="5"/>
+   <text x="40" y="120" font-size="15">10</text>
+   <text x="235" y="120" font-size="15">180</text>
+   <text x="440" y="120" font-size="15">350</text>
+   </g>
+</svg> 
+</div>
+
+---
+### D3에서 제공하는 척도의 종류
+- d3.scale.linear()<br>
+<span style="font-size:20px">선형 척도</span>
+- d3.scale.ordinal()<br>
+<span style="font-size:20px">- 치역이 카테고리 이름 같이 측정 불가능한 값일 경우에 사용하는 척도</span> 
+- d3.scale.sqrt()<br>
+<span style="font-size:20px">- 제곱근 척도</span>
+- d3.scale.pow()<br>
+<span style="font-size:20px">- 제곱 척도</span>
+- d3.scale.log()<br>
+<span style="font-size:20px">- 상용 로그(log) 척도</span>
+- d3.scale.quntize()<br>
+<span style="font-size:20px">- 치역을 위해 이산 값을 제공하는 선형 척도</span>
+- d3.scale.quantile()<br>
+<span style="font-size:20px">- 양자 척도와 비슷하지만, 정의역이 이산 값을 가짐</span>
+- d3.time.scale()<br>
+<span style="font-size:20px">날짜와 시간을 위한 척도</span>
+
+ 
+---
+
+### D3에서 제공하는 척도의 종류
+- d3.scale.category10()<br>
+- d3.scale.category20()<br>
+- d3.scale.category20b()<br>
+- d3.scale.category20c()<br>
+<span style="font-size:20px">미리 정의된 10개 또는 20개의 색상 서열 척도</span>
 
 ---
 
 
-- bullet 1
---
-
-- bullet 2
-
-
----
-
-# Slide
-
-Some content.
-
-???
-Some note.
-
----
-name: agenda
-
-# Agenda
-
----
-count: false
-
-This slide will not be counted.
-
----
-name: other-slide
-
-Some content.
-dsfsdf
----
-template: other-slide
-
-Content appended to other-slide's content.
-
----
-# Agenda
-
---
-1. Introduction
-
---
-2. Markdown formatting
-
----
-
-
-
-.footnote[.red.bold[*] Important footnote]
-
----
-
-Implicit return statment:
+### 척도 생성 방법
 
 ```javascript
-function () {
-*    return x + x;
-}
-
-Notice how there is no return statement.
+var scale = d3.scale.linear()
+                        .domain([100,500])  // 정의역
+                        .range([10,350]);   // 치역
+                        
+console.log(scale(100));    // 10
+console.log(scale(500));    // 350                        
+console.log(scale(300));    // 180
+console.log(scale(800));    // ??
 ```
-
 
 ---
 
-!:test sdf
+### 척도 생성 방법
+
+```javascript
+var scale = d3.scale.linear()
+                        .domain([100,500])  // 정의역
+                        .range([10,350]);   // 치역
+                        
+console.log(scale(100));    // 10
+console.log(scale(500));    // 350                        
+console.log(scale(300));    // 180
+console.log(scale(800));    // 605
+```
+
+--
+
+```javascript
+var scale = d3.scale.linear()
+                        .domain([100,500])
+                        .range([10,350])
+*                       .clamp(true);
+
+console.log(scale(800));    // 350
+console.log(scale(-100));    // 10
+```
+- nice()
+- rangeRound()
+- clamp()
+
+---
+
+### 축(Axis)
+
+<p>
+- 척도와 형태가 유사
+<br>
+<br>
+- 어떤 값을 반환하는 대신에 선과 라벨, 구분자를 가진 시각적 요소가 생성
+</p>
+
+---
+
+### 축 생성 방법
+
+```javascript
+var xAxis = d3.svg.axis()
+                   .scale(xScale)   // 척도 설정
+                   .orient("bottom");   // 축을 나타내는 선을 기준으로 라벨의 위치 지정
+
+svg.append("g")
+        .call(xAxis);
+```
+
+- g 문서요소의 역할<br>
+<span style="font-size:19px">- 다른 문서요소의 컨테이너 역할</span><br>
+<span style="font-size:19px">- 시각적 요소들을 렌더링하는 방법을 결정하는 트랜스폼(transformation) 적용</span>
+- call() 함수<br>
+<span style="font-size:19px">- 메서드 체인 앞단의 선택물을 가져와서 함수로 전달</span>
+```javascript
+xAxis(svg.append("g"))
+```
+
+---
+
+```css
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+```
+
+---
+- 브라우저에서 지원하는 표준 이벤트만 인식
+<span style="font-size:13px;">(<a href="http://quirksmode.org/dom/events/">http://quirksmode.org/dom/events/</a>)</span>
+- 특정 문서 요소와 이벤트 바인딩
+
+### ㄹㄴㅇㄹ
+
+---
+
+### 상호작용
+
+<p>
+</p>
+
+```javascript
+d3.select("p")
+    .on("click", function() {
+        // 클릭 시 수행될 작업
+    });
+```
+

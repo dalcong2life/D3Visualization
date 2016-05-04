@@ -19,45 +19,31 @@ var slideShow = remark.create({
 
 var getEl = document.getElementById.bind(document);
 
-var barchart = Chart.barchart();
 
 slideShow.on('beforeShowSlide', function (slide) {
-    console.log(slide.getSlideIndex());
+    var currentPage = slide.getSlideIndex() + 1;
 
-    switch (slide.getSlideIndex()) {
-        case 0:
-
-
-            break;
-        case 13:
-
-            var addBarchartData = function (data, len) {
-                for (var i = len - 1; i >= 0; i--) {
-                    data.push(Math.floor(Math.random() * 100) + 1);
-                }
-                return data;
-            };
-
-            var dataset = addBarchartData([], 15);
-            console.log(dataset);
-
-            d3.select('#barchar01')
-                .data([dataset])
-                .call(barchart);
-
+    console.log("Show Slide:", currentPage);
+    switch (currentPage) {
+        case 35:
+            var Force = Chart.ForceChart('#force-chart');
             break;
         default :
             console.log('default');
     }
 });
 
-slideShow.on('hideSlide', function (slide) {
-    console.log('Hide Slide: ', slide.getSlideIndex());
 
-    switch (slide.getSlideIndex()) {
-        case 13:
-            document.querySelector('#barchar01')
-                .innerHTML = '';
+slideShow.on('hideSlide', function (slide) {
+    var currentPage = slide.getSlideIndex() + 1;
+
+    console.log("Hide Slide:", currentPage);
+
+    switch (currentPage) {
+        case 35:
+            d3.select('#force-chart')
+                .selectAll('svg')
+                .remove();
             break;
     }
 
