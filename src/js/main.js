@@ -26,7 +26,45 @@ slideShow.on('beforeShowSlide', function (slide) {
     console.log("Show Slide:", currentPage);
     switch (currentPage) {
         case 35:
-            var Force = Chart.ForceChart('#force-chart');
+            //var Force = Chart.ForceChart('#force-chart');
+            break;
+
+        case 44:
+
+            var base = d3.select("#canvas-area");
+            var chart = base.append("canvas")
+                .attr("width", 200)
+                .attr("height", 100);
+
+            var context = chart.node().getContext("2d");
+            var data = [1,2,13,20,23];
+
+            var scale = d3.scale.linear()
+                .range([10, 390])
+                .domain([1,23]);
+
+            data.forEach(function(d, i) {
+                context.beginPath();
+                context.rect(scale(d), 150, 10, 10);
+                context.fillStyle="red";
+                context.fill();
+                context.closePath();
+            });
+
+            d3.json('../../data/miserables.json', function (error, graph) {
+                if (error) {
+                    return error;
+                }
+                var chart = Chart.ForceDirectedGraph()
+                    .width(400)
+                    .height(130);
+
+                d3.select('#svg-area')
+                    .data([graph])
+                    .call(chart);
+            });
+
+
             break;
         default :
             console.log('default');
@@ -58,10 +96,3 @@ var addBarchartData = function (data, len) {
     return data;
 };
 
-
-var dataset = addBarchartData([], 15);
-console.log(dataset);
-
-d3.select('#barchar01')
-    .data([dataset])
-    .call(barchart);
