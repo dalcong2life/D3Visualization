@@ -73,11 +73,11 @@ class: middle, center
 
 ---
 
-### 데이터 시각화가 시작된 시기
+### 데이터 시각화란 용어가 사용되기 시작한 시기
 
 <p style="margin-top:120px;">
 <span style="display:inline-block;background:#eee;padding:10px 10px 5px 10px;">
-<img style="width:100%" src="../img/Screenshot1.png">
+<img style="width:100%" src="src/img/Screenshot1.png">
 </span>
 
 <span style="display:block;text-align:right;margin-right:0px;font:0.6em normal;">
@@ -160,7 +160,7 @@ class: middle, center
 
 <p style="text-align:center;">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:607px;text-align:center;">
-<img style="width:100%" src="../img/FireShot-info.png">
+<img style="width:100%" src="src/img/FireShot-info.png">
 </span>
 </p>
 
@@ -177,7 +177,7 @@ class: middle, center
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:737px;text-align:center;">
-<img style="width:100%" src="../img/infographics2.jpg">
+<img style="width:100%" src="src/img/infographics2.jpg">
 </span>
 </p>
 
@@ -186,15 +186,13 @@ class: middle, center
 ---
 
 ### 탐색 도구
-<p>
-- 데이터 셋을 직접 탐색해 보고 의미를 파악할 수 있는 상호작용 가능한 도구를 제공<br>
-- <a href"http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen/transcript?language=en">
-한스 로스링(Hans Rosling)의 시각화(TED 영상)</a>
-</p>
+<p>- 데이터 셋을 직접 탐색해 보고 의미를 파악할 수 있는 상호작용 가능한 도구를 제공</p>
+<p>- <a href"http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen/transcript?language=en">
+한스 로스링(Hans Rosling)의 시각화(TED 영상)</a></p>
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:607px;text-align:center;">
-<img style="width:100%" src="../img/gapminder.png">
+<img style="width:100%" src="src/img/gapminder.png">
 </span>
 </p>
 
@@ -216,7 +214,7 @@ class: middle, center
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:737px;text-align:center;">
-<img style="width:100%" src="../img/dashboard.gif">
+<img style="width:100%" src="src/img/dashboard.gif">
 </span>
 </p>
 
@@ -234,13 +232,13 @@ class: middle, center
 
 <table>
 <thead>
-<tr>
+<tr style="height:35px">
     <th>데이터 형식</th>
     <th>설명</th>
 </tr>
 </thead>
 <tbody>
-    <tr>
+    <tr style="height:60px">
         <td>
         배열<br>
         (레코드 등 표 형식으로 표현)
@@ -248,7 +246,7 @@ class: middle, center
         <td>
         각 데이터는 복수의 속성값이 있으며 하나의 데이터는 한 줄로 표현</td>
     </tr>
-    <tr>
+    <tr style="height:100px">
         <td>
         그래프<br>
         (트리 구조와 중첩 구조, 네트워크 등)</td>
@@ -268,117 +266,137 @@ class: middle, center
 
 <div>
     <div style="float:left;width:50%;">
-    - 막대그래프
-    <br>
-    <br>
-    - 누적 막대그래프
-    <br>
-    <br>
-    - 히스토그램
-    <br>
-    <br>
-    - 퍼널 그래프
-    <br>
-    <br>
-    - 꺾은선그래프
-    <br>
-    <br>
-    - 평행형 / 방사형 차트
-    <br>
-    <br>
-    - 영역형 그래프
+    <p>- 막대그래프</p>
+    <p>- 누적 막대그래프</p>
+    <p>- 히스토그램</p>
+    <p>- 퍼널 그래프</p>
+    <p>- 꺾은선그래프</p>
+    <p>- 평행형 / 방사형 차트</p>
+    <p>- 영역형 그래프</p>
     </div>
     <div style="float:left;width:50%">
-    - 원그래프 / 도넛그래프
-    <br>
-    <br>
-    - 상자 수염 그림
-    <br>
-    <br>
-    - 산포도
-    <br>
-    <br>
-    - 산포도 행렬
-    <br>
-    <br>
-    - 버블차트
-    <br>
-    <br>
-    - 히트맵    
+    <p>- 원그래프 / 도넛그래프</p>
+    <p>- 상자 수염 그림</p>
+    <p>- 산포도</p>
+    <p>- 산포도 행렬</p>
+    <p>- 버블차트</p>
+    <p>- 히트맵</p>
     </div>
 </div>
-
 
 ---
 
 ### 막대그래프
-<p>
-- 같은 너비의 막대를 사용하여 높이로 데이터를 표현
+<p>- 같은 너비의 막대를 사용하여 높이로 데이터를 표현</p>
+<p>- 데이터의 크기 비교에 적합</p>
+<p>- 그리는 방식에 따라 막대를 세로 또는 가로로 그리는 경우가 있음</p>
+<p>- 복수 계열을 표현할 경우 10개 이상 늘어나지 않도록 할 것</p>
 <br>
-<br>
-- 데이터의 크기 비교에 적합
-<br>
-<br>
-- 그리는 방식에 따라 막대를 세로 또는 가로로 그리는 경우가 있음
-<br>
-<br>
-- 복수 계열을 표현할 경우 10개 이상 늘어나지 않도록 할 것
-</p>
 
-<div id="bar-content"></div>
+<div id="barchart"></div>
 
 ---
 
 ### 누적 막대그래프
 
+<p>- 막대그래프를 쌓아올린 형태로 복수 요소를 표현</p>
+<p>- 전체량과 동시에 하나의 막대를 구성하는 내용을 시각화</p>
+<br>
+
+<div id="stackedchart"></div>
+
+
+???
+1.합계한 값의 높이를 고정하기 않는다. 데이터 내역을 표현하면서 절대량을 비교할 수 있다.<br>
+2.합계한 값의 높이를 정규화한다. 합계한 값에 대응하는 높이를 고정값으로 하면, 내역(비율)을 표현할 수 있다. 
+띠그래프로도 불린다.
+
+
 ---
 
 ### 히스토그램
+
+<p>- 하나의 데이터 세트 안에 있는 변수에 대한 분포를 표현</p>
+<p>- 계급: 보고 싶은 데이터의 범위</p>
+<p>- 도수: 계급에 포함되는 데이터 개수</p>
+
+
 
 ---
 
 ### 퍼널 그래프
 
+<p>- 한 방향으로 진행하며 서서히 좁아지는(감소) 데이터를 시각화</p>
+<p>- 단계별 인수 분석에 이용</p>
+
+
+
 ---
 
 ### 꺾은선그래프
+
+<p>- 데이터를 점으로 표시하고 그 점을 선으로 연결하여 하나의 계열로 표현</p>
+<p>- 베이스라인이나 트렌드 파악에 적합</p>
+
+
 
 ---
 
 ### 평행형 / 방사형 차트
 
+<p>- 평행으로 그은 복수의 직선에 데이터의 속성값을 플롯하여 한 줄로 연결해서 표현</p>
+<p>- 평행선은 각각 하나의 속성값을 일차원으로 표현하며 많은 속성값을 동시에 표현 가능</p>
+<p>- 전체 경향을 파악할 수 있을 뿐만 아니라 특정 관점으로 선의 색을 구분하여 특정 집단에서의 경향을 쉽게 분석 가능</p>
+
+
+
 ---
 
 ### 영역형 그래프
+
+<p>- 선그래프를 누적해서 면으로 표현한 그래프</p>
+<p>- 시계열 데이터 등 주로 연속적인 변화 표현에 적합</p>
+
 
 ---
 
 ### 원그래프 /도넛그래프
 
+<p>- 원의 잘라 각도로 각 데이터의 양을 표현한 그래프</p>
+<p>- 비율 표현에 적합, 표현할 내용을 다섯 개 이하로 제한</p>
+<p>- 각도와 면적을 정확히 비교하기 힘들기 때문에 사용 자제</p>
+<p>- 누적 그래프(띠그래프)로 대체 가능</p>
+
+
+???
+도넛그래프는 원그래프 가운데가 뚫린 그래프로 중앙의 빈자리에 설명이나 합계 표현
+
 ---
 
 ### 상자 수염 그림
 
+<p>- 최솟값, 1사분위, 중앙값, 3사분위, 최대값을 동시에 표현할 수 있는 그래프</p>
+
+???
+히스토그램과는 다르게 집단이 여러개인 경우에도 한 공간에 수월하게 표현 가능
+
 ---
 
 ### 산포도
-<p>
-- X축과 Y축으로 두 데이터 사이의 관계성을 표현<br>
-- 상관관계 유무 등을 볼 수 있으므로 데이터의 기본적인 성질을 파악하는데 이용<br>
-</p>
+<p>- X축과 Y축으로 두 데이터 사이의 관계성을 표현</p>
+<p>- 상관관계 유무 등을 볼 수 있으므로 데이터의 기본적인 성질을 파악하는데 이용</p>
 
 ---
 
 ### 산포도 행렬
 
-<p>
-- 산포도 자체를 매트릭스 형태로 배치하여 여러 변수의 관계성을 시각화<br>
-- 각각의 행과 열은 모두 다른 변수를 나타내며 교차하는 부분이 각 변수의 산포도로 표현<br>
-</p>
+<p>- 산포도 자체를 매트릭스 형태로 배치하여 여러 변수의 관계성을 시각화</p>
+<p>- 각각의 행과 열은 모두 다른 변수를 나타내며 교차하는 부분이 각 변수의 산포도로 표현</p>
+
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:400px;text-align:center;">
-<img style="width:100%" src="../img/Scatter_Plot_Matrix.png">
+<img style="width:100%" src="src/img/Scatter_Plot_Matrix.png">
 </span>
 </p>
 
@@ -388,10 +406,8 @@ class: middle, center
 
 ### 버블차트
 
-<p>
-- 점을 원으로 그려 반지름으로 수치를 표현<br>
-- X축, Y축, 반지름으로 세 가지 수치 데이터 표현<br>
-</p>
+<p>- 점을 원으로 그려 반지름으로 수치를 표현</p>
+<p>- X축, Y축, 반지름으로 세 가지 수치 데이터 표현</p>
 
 <div id="bubble-chart"></div>
 
@@ -399,16 +415,12 @@ class: middle, center
 
 ### 히트맵
 
-<p>
-- 분포의 도수를 색으로 표현해서 위치 정보에 플롯한 시각화
-<br>
-<br>
-- 어느 위치에서 도수가 높거나 낮은지를 한눈에 파악 가능
-</p>
+<p>- 분포의 도수를 색으로 표현해서 위치 정보에 플롯한 시각화</p>
+<p>- 어느 위치에서 도수가 높거나 낮은지를 한눈에 파악 가능</p>
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:637px;text-align:center;">
-<img style="width:100%" src="../img/australia-heat-map.jpg">
+<img style="width:100%" src="src/img/australia-heat-map.jpg">
 </span>
 </p>
 
@@ -420,31 +432,21 @@ class: middle, center
 
 ### 그래프 데이터를 표현하는 차트(그래프)
 
-- 트리맵
-<br>
-<br>
-- 파티션 다이어그램
-<br>
-<br>
-- 산키 차트
-<br>
-<br>
-- 역학 그래프
+<p>- 트리맵</p>
+<p>- 파티션 다이어그램</p>
+<p>- 산키 차트</p>
+<p>- 역학 그래프</p>
 
 ---
 
 ### 트리맵(Treemap)
 
-<p>
-- 중첩 구조(트리 구조)로 된 계층적 데이터를 면적으로 표시한 차트
-<br>
-<br>
-- 각각의 데이터가 전체에서 차지하는 비율을 구조적으로 확인 가능<br>
-</p>
+<p>- 중첩 구조(트리 구조)로 된 계층적 데이터를 면적으로 표시한 차트</p>
+<p>- 각각의 데이터가 전체에서 차지하는 비율을 구조적으로 확인 가능</p>
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:537px;text-align:center;">
-    <img style="width:100%" src="../img/treemap.png"/>
+    <img style="width:100%" src="src/img/treemap.png"/>
 </span>
 </p>
 
@@ -456,27 +458,21 @@ class: middle, center
 
 ### 파티션 다이어그램(Partition Diagram)
 
-<p>
-- 큰 카테고리에서부터 작은 항목으로 계층적 관계성과 양적 관계를 표시
-<br>
-<br>
-- 관계성 파악은 원 또는 방사형 선택
-<br>
-<br>
-- 양적인 관계 파악은 사각형 형태 선택
-<p>
+<p>- 큰 카테고리에서부터 작은 항목으로 계층적 관계성과 양적 관계를 표시</p>
+<p>- 관계성 파악은 원 또는 방사형 선택</p>
+<p>- 양적인 관계 파악은 사각형 형태 선택</p>
 
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:33%;float:left;">
-    <img style="width:100%" src="../img/circle-packing.png"/>
+    <img style="width:100%" src="src/img/circle-packing.png"/>
     </span>
     <span style="width:33%;float:left;">
-    <img style="width:100%" src="../img/zoomable-sunburst.png"/>
+    <img style="width:100%" src="src/img/zoomable-sunburst.png"/>
     </span>
     <span style="width:34%;float:left;">
-    <img style="width:100%" src="../img/partition.png"/>
+    <img style="width:100%" src="src/img/partition.png"/>
     </span>
 </span>
 </p>
@@ -489,19 +485,13 @@ class: middle, center
 
 ### 산키 차트(Sankey Chart)
 
-<p>
-- 어디에서부터 어디로 향하는지에 대해 시각화
-<br>
-<br>
-- 사용자의 흐름이나 이동을 표현
-<br>
-<br>
-- 반복이 발생하거나 이동 패턴이 많이 존재하면 구조가 복잡해지는 단점
-</p>
+<p>- 어디에서부터 어디로 향하는지에 대해 시각화</p>
+<p>- 사용자의 흐름이나 이동을 표현</p>
+<p>- 반복이 발생하거나 이동 패턴이 많이 존재하면 구조가 복잡해지는 단점</p>
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:637px;text-align:center;">
-    <img style="width:100%" src="../img/sankey-chart.png"/>
+    <img style="width:100%" src="src/img/sankey-chart.png"/>
 </span>
 </p>
 
@@ -518,12 +508,10 @@ Google Analyics의 유저 플로우<br>
 
 ### 역학 그래프(Force Directed Graph)
 
-<p>
-- 노드와 그 관계를 표현하는데 적합
-<br>
-<br>
-- 인맥 등이 나타나는 소셜 그래프나 사용자가 대상에 하는 행위 등을 시각화할 때 사용
-</p>
+<p>- 노드와 그 관계를 표현하는데 적합</p>
+<p>- 인맥 등이 나타나는 소셜 그래프나 사용자가 대상에 하는 행위 등을 시각화할 때 사용</p>
+
+
 <div width="100%">
 <canvas id="force-chart" width="800" height="500"></canvas>
 </div>
@@ -533,7 +521,7 @@ Google Analyics의 유저 플로우<br>
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:737px;text-align:center;">
-    <img style="width:100%" src="../img/chart-suggestion-infographic.jpg"/>
+    <img style="width:100%" src="src/img/chart-suggestion-infographic.jpg"/>
 </span>
 </p>
 
@@ -551,78 +539,51 @@ class: middle, center
 </h2>
 ---
 
-## 목표
-<p>
-- 잘못된 시각화를 피하고 적절한 시각화를 선택하도록 한다.
-</p>
-
-
-<p style="text-align:left;margin-top:0px;">
-   <img style="width:50%" src="../img/wonder-graph-gen.png"> 
-</p> 
-
----
 ### 원그래프
 
-<p>
-- 각 요소의 크기를 정확하게 인지하기 어렵다.
-<br>
-<br>
-- 복수의 원그래프를 비교하기 어렵다.
-<br>
-<br>
-- 위 두 문제를 해결한 띠그래프와 막대그래프를 사용하라.
-</p>
+<p>- 각 요소의 크기를 정확하게 인지하기 어렵다.</p>
+<p>- 복수의 원그래프를 비교하기 어렵다.</p>
+<p>- 위 두 문제를 해결한 띠그래프와 막대그래프를 사용하라.</p>
+
 
 ???
 사람의 눈은 길이보다 면적을 이해하기가 어렵고 각도도 정확히 인식하기 어렵기 때문에, 
 막대 그래프와 띠그래프가 해석의 편의성 측면에서 더 적절하다
 
-
 ---
 
 ### 3D 그래프
 
-<p>
-- 앞쪽에 있는 오브젝트의 표면적이 다른 오브젝트보다 커져 보인다.
-<br/>
-<br/>
-- 보는 시점에 따라 더 큰 왜곡되어 보여진다.
-</p>
+<p>- 앞쪽에 있는 오브젝트의 표면적이 다른 오브젝트보다 커져 보인다.</p>
+<p>- 보는 시점에 따라 더 큰 왜곡되어 보여진다.</p>
+<br>
+<br>
 
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:737px;text-align:center;">
     <span style="width:50%;float:left;">
-    <img style="width:100%" src="../img/3d-circle-chart.png"/>
+    <img style="width:100%" src="src/img/3d-circle-chart.png"/>
     </span>
     <span style="width:50%;float:left;">
-    <img style="width:100%" src="../img/3d-circle-chart-2.png"/>
+    <img style="width:100%" src="src/img/3d-circle-chart-2.png"/>
     </span>
     
 </span>
 </p>
 
 
-
-
 ---
 ### 그림 그래프
-<p>
-- 그림의 크기로 데이터의 크기를 나타내는 그래프
-<br/>
-<br/>
-- 오른쪽과 왼쪽과 데이터 대비 두 배지만 2배 이상인 느낌을 준다.
-</p>
+<p>- 그림의 크기로 데이터의 크기를 나타내는 그래프</p>
+<p>- 오른쪽과 왼쪽과 데이터 대비 두 배지만 2배 이상인 느낌을 준다.</p>
 
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:517px;text-align:center;">
-<img style="width:100%" src="../img/human-chart.jpg">
+<img style="width:100%" src="src/img/human-chart.jpg">
 </span>
 </p>
-
-
 
 
 ---
@@ -635,25 +596,15 @@ class: middle, center
 
 ### D3 소개
 
-<p>
-- 데이터 시각화 제작을 위한 자바스크립트 라이브러리
-<br>
-<br>
-- 웹 문서를 데이터 중심으로 다룰 수 있음(Data Driven Document)
-<br>
-<br>
-- 마이크 보스탁(Mike Bostock, http://bost.ocks.org/mike)
-<br>
-<br>
-- BSD 라이선스
-<br/>
-<br/>
-- http://www.d3js.org<br>
-</p>
+<p>- 데이터 시각화 제작을 위한 자바스크립트 라이브러리</p>
+<p>- 웹 문서를 데이터 중심으로 다룰 수 있음(Data Driven Document)</p>
+<p>- 마이크 보스탁(Mike Bostock, http://bost.ocks.org/mike)</p>
+<p>- BSD 라이선스</p>
+<p>- http://www.d3js.org</p>
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:600px;text-align:center;">
-<img style="width:100%" src="../img/mbostock-GitHub.png">
+<img style="width:100%" src="src/img/mbostock-GitHub.png">
 </span>
 </p>
 
@@ -669,16 +620,11 @@ class: middle, center
 
 ### SVG(Scalable Vector Graphics)
 
+<p>- 텍스트 기반의 이미지 포맷</p>
+<p>- HTML과 비슷한 마크업 코드로 정의</p>
+<p>- IE8 이하를 제외한 모든 브라우저가 지원
+<span style="font-size:18px;">(<a href="http://caniuse.com/#feat=svg">http://caniuse.com/#feat=svg</a>)</span>
 <p>
-- 텍스트 기반의 이미지 포맷
-<br>
-<br>
-- HTML과 비슷한 마크업 코드로 정의
-<br>
-<br>
-- IE8 이하를 제외한 모든 브라우저가 지원
-<span style="font-size:20px;">(<a href="http://caniuse.com/#feat=svg">http://caniuse.com/#feat=svg</a>)</span>
-</p>
 
 <table>
 <thead>
@@ -701,19 +647,15 @@ class: middle, center
         <td>스크립트와 CSS로 스타일 변경</td>
     </tr>
     <tr style="height:35px">
-        <td style="text-align:left!important">다수의 오브젝트(10,000 이상), 작은 표면에서 높은 성능</td>
-        <td>소수의 오브젝트(10,000 미만), 큰 표면에서 높은 성능</td>
+        <td style="text-align:left!important">다수의 오브젝트(10,000개 이상), 작은 표면에서 높은 성능</td>
+        <td>소수의 오브젝트(10,000개 미만), 큰 표면에서 높은 성능</td>
     </tr>
 </tbody>
 </table>
 <br>
 <div>
-    <div style="width:49%;float:left;border:1px solid #eee" id="canvas-area">
-        
-    </div>
-    <div style="width:49%;float:left;border:1px solid #eee" id="svg-area">
-       
-    </div>
+    <div style="width:49%;float:left;border:1px solid #eee" id="canvas-area"></div>
+    <div style="width:49%;float:left;border:1px solid #eee" id="svg-area"></div>
 </div>
 
 
@@ -726,13 +668,9 @@ DOM과 동일한 요소로 취급되기 때문에 디버그 하기 쉽다
 ---
 ### SVG 좌표 시스템
 
-<p>
-- 일반적인 픽셀 기반의 좌표 시스템과 동일
+<p>- 일반적인 픽셀 기반의 좌표 시스템과 동일</p>
+<p>- 드로잉 영역의 좌측 상단을 0, 0으로 지정</p>
 <br>
-<br>
-- 드로잉 영역의 좌측 상단을 0, 0으로 지정
-</p>
-
 
 <div style="background-color:#eee;height:320px;">
 <svg width="748" height="500">  
@@ -745,7 +683,6 @@ DOM과 동일한 요소로 취급되기 때문에 디버그 하기 쉽다
     <text x="305" y="200">300,200</text>
     <line x1="0" y1="0" x2="0" y2="300" stroke-width="1.5" stroke="#000" marker-end="url(#triangle-end)"/>
     <line x1="0" y1="0" x2="730" y2="0" stroke-width="1.5" stroke="#000" marker-end="url(#triangle-end)"/>
-    
     </g>
     <defs>
         <marker id="triangle-x" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
@@ -755,8 +692,6 @@ DOM과 동일한 요소로 취급되기 때문에 디버그 하기 쉽다
             <path d="M 0 0 L 10 5 L 0 10 z"/>
         </marker>
     </defs>
-    
-    
 </svg>
 </div>
 
@@ -856,30 +791,18 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 <div>
     <div style="float:left;width:50%;">
-        <ul>
-        <li style="font-weight:bold;">g</li>
-        <br>
-        <li style="font-weight:bold;">a</li>
-        <br>
-        <li>defs</li>
-        <br>
-        <li>glyph</li>
-        <br>
-        <li>marker</li>
-        <br>
-        <li>mask</li>
-        <br>
-        <li>missing-glyph</li>
-        </ul>
+        <p>- g</p>
+        <p>- a</p>
+        <p>- defs</p>
+        <p>- glyph</p>
+        <p>- marker</p>
+        <p>- mask</p>
+        <p>- missing-glyph</p>
     </div>
     <div style="float:left;width:50%">
-        <ul>
-        <li>pattern</li>
-        <br>
-        <li>switch</li>
-        <br>
-        <li>symbol</li>
-        </ul>
+        <p>- pattern</p>
+        <p>- switch</p>
+        <p>- symbol</p>
     </div>
 </div>
  
@@ -890,15 +813,11 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 ### D3 다운로드 및 참조하기
 
-<p>
-- https://github.com/mbostock/d3 다운로드
+<p>- <a href="https://d3js.org/">https://d3js.org/</a> 다운로드</p>
+<p>- <a href="https://github.com/mbostock/d3">https://github.com/mbostock/d3</a> 다운로드</p>
+<p>- bower install d3 --save</p>
+<p>- CDN(<a href="https://cdnjs.com/libraries/d3">https://cdnjs.com/libraries/d3</a>)</p>
 <br>
-<br>
-- bower install d3 --save
-<br>
-<br>
-- CDN(<a href="https://cdnjs.com/libraries/d3">https://cdnjs.com/libraries/d3</a>)
-</p>
 
 ```javascript
 <!DOCTYPE html>
@@ -914,7 +833,6 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 </html>
 ```
 
-
 .footnote[.red.bold[*]https://github.com/mbostock/d3/tree/4]
 
 
@@ -922,25 +840,80 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 ### D3 동작 순서
 
-<p>
-1. 데이터를 브라우저 메모리로 로딩(Loading)
-<br>
-<br>
-2. HTML 문서요소를 생성한 후 데이터와 바인딩(Binding)
-<br>
-<br>
-3. 개별 데이터를 토대로 문서요소의 속성을 지정(Transforming)
-<br>
-<br>
-4. 사용자 입력에 대한 반응으로 문서요소의 상태값 전이(Transitioning)
-</p>
+<p>1. 데이터를 브라우저 메모리로 로딩(Loading)</p>
+<p>2. HTML 문서요소를 생성한 후 데이터와 바인딩(Binding)</p>
+<p>3. 개별 데이터를 토대로 문서요소의 속성을 지정(Transforming)</p>
+<p>4. 사용자 입력에 대한 반응으로 문서요소의 상태값 전이(Transitioning)</p>
+
+---
+
+### 데이터 로딩
+
+<table>
+<thead>
+<tr style="height:35px">
+    <th style="width:10%">종류</th>
+    <th>D3 메소드</th>
+    <th>설명</th>
+</tr>
+</thead>
+<tbody >
+    <tr style="height:35px">
+        <td>TSV</td>
+        <td>d3.tsv(url[, accessor][, callback])</td>
+        <td>데이터가 탭으로 구분된 형식</td>
+    </tr>
+    <tr style="height:35px">
+        <td>CSV</td>
+        <td>d3.csv(url[, accessor][, callback])</td>
+        <td>데이터가 콤마로 구분된 형식</td>
+    </tr>
+    <tr style="height:35px">
+        <td>JSON</td>
+        <td>d3.json(url[, callback])</td>
+        <td>JavaScript Object Notation</td>
+    </tr>
+    <tr style="height:35px">
+        <td>HTML</td>
+        <td>d3.html(url[, callback])</td>
+        <td>브라우저로 표시했을 때 데이터를 보기 좋게 표시. 레이아웃 존재</td>
+    </tr>
+    <tr style="height:35px">
+        <td>XML</td>
+        <td>d3.xml(url[, mimeType][, callback])</td>
+        <td>태그를 이용한 데이터 표현</td>
+    </tr>
+    <tr style="height:35px">
+        <td>TEXT</td>
+        <td>d3.text(url[, mimeType][, callback])</td>
+        <td>순순 문자열로만 구성된 데이터 파일</td>
+    </tr>
+</tbody>
+</table>
+```javascript
+d3.json('user.json', function(error, data) {
+    if(error) throw error;
+    // 차트 생성
+});
+```
+
+```javascript
+d3.csv('user.csv', accessor, function(error, data) {
+    if(error) throw error;
+    // 차트 생성
+});
+
+var accessor = function(d) {
+*    d.age = +d.age;
+};
+```
 
 
 ---
 
 ### 문서요소 생성하기
 
-<span>1. 메소드 체인으로 속성 지정</span>
+<p>1. 메소드 체인으로 속성 지정</p>
 ```javascript
 d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
     .append("rect")
@@ -950,7 +923,7 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
     .attr("height", 200);
 ```
 
-<span>2. 객체로 속성 지정</span>
+<p>2. 객체로 속성 지정</p>
 ```javascript
 d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
     .append("rect")
@@ -970,15 +943,16 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
 
 ---
 
+### 
+
+---
+
 
 ### 척도(Scale)
 
-<p>
-- 입력되는 정의역(domain)과 출력되는 치역(range)을 매핑한 함수
+<p>- 입력되는 정의역(domain)과 출력되는 치역(range)을 매핑한 함수</p>
+<p>- 데이터 값을 시각화에 필요한 적절한 값(비율)로 매핑</p>
 <br>
-<br>
-- 데이터 값을 시각화에 필요한 적절한 값(비율)로 매핑
-</p>
 
 <div style="background-color:#eee;height:320px;">
 <svg width="748" height="500">
@@ -1004,6 +978,7 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
 
 ---
 ### D3에서 제공하는 척도의 종류
+
 - d3.scale.linear()<br>
 <span style="font-size:20px">선형 척도</span>
 - d3.scale.ordinal()<br>
@@ -1081,12 +1056,8 @@ console.log(scale(-100));    // 10
 
 ### 축(Axis)
 
-<p>
-- 척도와 형태가 유사
-<br>
-<br>
-- 어떤 값을 반환하는 대신에 선과 라벨, 구분자를 가진 시각적 요소가 생성
-</p>
+<p>- 척도와 형태가 유사</p>
+<p>- 어떤 값을 반환하는 대신에 선과 라벨, 구분자를 가진 시각적 요소가 생성</p>
 
 ---
 
@@ -1098,6 +1069,8 @@ var xAxis = d3.svg.axis()
                    .orient("bottom");   // 축을 나타내는 선을 기준으로 라벨의 위치 지정
 
 svg.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0, 400")
         .call(xAxis);
 ```
 
@@ -1112,6 +1085,16 @@ xAxis(svg.append("g"))
 
 ---
 
+###  축 스타일 설정
+
+<p>
+- shape-rendering<span style="font-size:14px;">
+(<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering">https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering</a>)
+</span>
+<br>
+<span style="font-size:20px">: 축과 구분선을 선명하게 만들기 위해서 사용</span>
+</p>
+
 ```css
 .axis path,
 .axis line {
@@ -1125,6 +1108,45 @@ xAxis(svg.append("g"))
     font-size: 11px;
 }
 ```
+
+
+---
+
+### Transition
+
+<p>- 실제 데이터는 시간에 따라서 변화한다. (Update)</p>
+<p>-시각적 인지를 위해 모션을 통한 트랜지션 사용 가능</p>
+
+```javascript
+svg.selectAll("rect")
+    .data(dataset)
+*    .transition()
+    .attr("y", function(d) {
+        return h - yScale(d);
+    })
+    .attr("height", function(d) {
+        return yScale(d);
+    })
+    .attr("fill", function(d) {
+        return "rgb(0, 0, " + (d * 10) + ")");
+    });
+```
+
+---
+
+### Easing
+
+<p>- 트랜지션에 사용되는 모션의 특징(기본값: cubic-in-out)</p>
+```javascript
+...
+    .transition()
+    .duration(1000)
+*    .ease("linear")
+...// attr() 을 사용한 구문 
+```
+
+<div id="easing-chart"></div>
+
 
 ---
 - 브라우저에서 지원하는 표준 이벤트만 인식

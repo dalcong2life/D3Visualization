@@ -1,3 +1,13 @@
+import d3 from "d3";
+import React from "react";
+import ReactDOM from "react-dom";
+
+import BasicBarChart from "./components/BasicBarChart";
+import DualBarChart from "./components/DualBarChart";
+import StackedBarChart from "./components/StackedBarChart";
+import CanvasBarChart from "./components/CanvasBarChart";
+import EasingChecker from "./components/EasingChecker";
+
 remark.macros.scale = function (percentage) {
     return '<img src="' + this + '" style="width: ' + percentage + '" />';
 };
@@ -9,7 +19,7 @@ var slideShow = remark.create({
         scroll: false
     },
 
-    sourceUrl: 'html/slide0.md',
+    sourceUrl: 'src/html/slide0.md',
     highlightLanguage: 'javascript',
     highlightStyle: 'zenburn',
     highlightLines: true,
@@ -25,44 +35,75 @@ slideShow.on('beforeShowSlide', function (slide) {
 
     console.log("Show Slide:", currentPage);
     switch (currentPage) {
-        case 35:
-            //var Force = Chart.ForceChart('#force-chart');
+
+        case 18:
+            ReactDOM.render(
+                <div>
+                    <BasicBarChart width={345} height={300} style={{width:"50%",float:"left"}}/>
+                    <DualBarChart width={345} height={300} style={{width:"50%",float:"left"}}/>
+                </div>,
+                document.getElementById("barchart")
+            );
+            break;
+
+        case 19:
+            ReactDOM.render(
+                <StackedBarChart />,
+                document.getElementById("stackedchart")
+            );
+        case 43:
+            ReactDOM.render(
+                <CanvasBarChart width={330} height={200}/>,
+                document.getElementById("canvas-area")
+            );
+
+            ReactDOM.render(
+                <BasicBarChart width={330} height={200} color="orange"/>,
+                document.getElementById("svg-area")
+            );
+            break;
+
+        case 65:
+            ReactDOM.render(
+                <EasingChecker/>,
+                document.getElementById("easing-chart")
+            );
             break;
 
         case 44:
 
-            var base = d3.select("#canvas-area");
-            var chart = base.append("canvas")
-                .attr("width", 200)
-                .attr("height", 100);
-
-            var context = chart.node().getContext("2d");
-            var data = [1,2,13,20,23];
-
-            var scale = d3.scale.linear()
-                .range([10, 390])
-                .domain([1,23]);
-
-            data.forEach(function(d, i) {
-                context.beginPath();
-                context.rect(scale(d), 150, 10, 10);
-                context.fillStyle="red";
-                context.fill();
-                context.closePath();
-            });
-
-            d3.json('../../data/miserables.json', function (error, graph) {
-                if (error) {
-                    return error;
-                }
-                var chart = Chart.ForceDirectedGraph()
-                    .width(400)
-                    .height(130);
-
-                d3.select('#svg-area')
-                    .data([graph])
-                    .call(chart);
-            });
+            //var base = d3.select("#canvas-area");
+            //var chart = base.append("canvas")
+            //    .attr("width", 200)
+            //    .attr("height", 100);
+            //
+            //var context = chart.node().getContext("2d");
+            //var data = [1, 2, 13, 20, 23];
+            //
+            //var scale = d3.scale.linear()
+            //    .range([10, 390])
+            //    .domain([1, 23]);
+            //
+            //data.forEach(function (d, i) {
+            //    context.beginPath();
+            //    context.rect(scale(d), 150, 10, 10);
+            //    context.fillStyle = "red";
+            //    context.fill();
+            //    context.closePath();
+            //});
+            //
+            //d3.json('../../data/miserables.json', function (error, graph) {
+            //    if (error) {
+            //        return error;
+            //    }
+            //    var chart = Chart.ForceDirectedGraph()
+            //        .width(400)
+            //        .height(130);
+            //
+            //    d3.select('#svg-area')
+            //        .data([graph])
+            //        .call(chart);
+            //});
 
 
             break;
@@ -78,11 +119,18 @@ slideShow.on('hideSlide', function (slide) {
     console.log("Hide Slide:", currentPage);
 
     switch (currentPage) {
-        case 35:
-            d3.select('#force-chart')
-                .selectAll('svg')
-                .remove();
+        case 18:
+            ReactDOM.unmountComponentAtNode(document.getElementById("barchart"));
             break;
+        case 19:
+            ReactDOM.unmountComponentAtNode(document.getElementById("stackedchart"));
+            break;
+
+        case 43:
+            ReactDOM.unmountComponentAtNode(document.getElementById("canvas-area"));
+            ReactDOM.unmountComponentAtNode(document.getElementById("svg-area"));
+            break;
+
     }
 
 

@@ -1,0 +1,212 @@
+body {
+    font-family: 'Nanum Gothic';
+    letter-spacing: 0.025em;
+
+}
+
+h1, h2, h3 {
+    font-family: 'Nanum Gothic';
+    font-weight: normal;
+}
+
+.remark-slide-content h1 {
+    font-size: 2.4em;
+    color: #606060;
+    font-weight: bold;
+    letter-spacing: 0.05em
+}
+
+.remark-slide-content h2 {
+    font-size: 2.0em;
+    color: #606060;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 0em
+}
+
+.remark-slide-content h3 {
+    font-size: 1.4em;
+    color: #606060;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 0em
+}
+
+.remark-slide-content p, ol, ul {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.remark-code, .remark-inline-code {
+    font-family: 'Ubuntu Mono';
+}
+
+.remark-fading {
+    z-index: 9;
+}
+
+/* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+.remark-slide-container {
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+.remark-visible {
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+}
+
+/* Two-column layout */
+.left-column {
+    width: 50%;
+    float: left;
+}
+
+.right-column {
+    width: 49%;
+    float: right;
+    padding-top: 0em;
+    margin-top: 0em;
+    text-align: left;
+}
+
+.footnote {
+    position: absolute;
+    bottom: 1em;
+    font-size: 0.7em;
+}
+
+/* Some special classes */
+.title {
+    font-size: 1.8em;
+    color: #606060;
+    font-weight: bold;
+    letter-spacing: 0.05em
+}
+
+.subtitle {
+    font-size: 1.4em
+}
+
+.author {
+    font-size: 1.4em;
+    color: #606060;
+    font-weight: bold;
+    letter-spacing: 0.02em
+}
+
+.coauthor {
+    font-size: 1.0em;
+    color: #606060;
+    font-weight: bold;
+    letter-spacing: 0.02em
+}
+
+.institution {
+    font-size: 1.0em;
+}
+
+.date {
+    font-size: 1.0em;
+    font-style: italic
+}
+
+.cite {
+    font-size: 0.8em;
+    color: #33AA99;
+    font-style: italic
+}
+
+.strike {
+    color: salmon;
+    text-decoration: line-through
+}
+
+/*Set color scheme for links.*/
+a {
+    text-decoration: none;
+    color: #666666;
+    text-align: center;
+    width: 24%
+}
+
+/*Setting link properties is particular, do not change order below*/
+a:visited {
+    color: #666666
+}
+
+a:hover {
+    color: #33AA99
+}
+
+a:active, a#active {
+    color: #FF9700;
+}
+
+.remark-slide-content p.highlight {
+    font-size: 1.4em;
+    color: #606060;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 0em;
+    background-color: #eeeeee;
+    border: 1px dotted #000;
+}
+
+.red {
+    color: red
+}
+
+.bold {
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #eee;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+td {
+    font-size: 14px;
+}
+
+td:nth-child(1) {
+    text-align: center;
+}
+
+pre {
+    margin-top: 5px !important;
+}
+
+.node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.link {
+    stroke: #999;
+    stroke-opacity: .6;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}

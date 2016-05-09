@@ -11,7 +11,6 @@
   "license": "dalcong2life@gmail.com",
   "homepage": "",
   "dependencies": {
-    "d3": "^3.5.16",
     "remark": "^0.13.0"
   }
 }
