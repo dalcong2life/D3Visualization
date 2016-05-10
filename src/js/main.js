@@ -7,6 +7,8 @@ import DualBarChart from "./components/DualBarChart";
 import StackedBarChart from "./components/StackedBarChart";
 import CanvasBarChart from "./components/CanvasBarChart";
 import EasingChecker from "./components/EasingChecker";
+import PieChart from "./components/PieChart";
+
 
 remark.macros.scale = function (percentage) {
     return '<img src="' + this + '" style="width: ' + percentage + '" />';
@@ -63,12 +65,26 @@ slideShow.on('beforeShowSlide', function (slide) {
             );
             break;
 
-        case 65:
+        case 66:
             ReactDOM.render(
                 <EasingChecker/>,
                 document.getElementById("easing-chart")
             );
             break;
+
+        case 72:
+            ReactDOM.render(
+                <PieChart width={700} height={400} outerRadius={200}/>,
+                document.getElementById("pie-chart")
+            );
+            break;
+        case 73:
+            ReactDOM.render(
+                <PieChart innerRadius={100} outerRadius={200} width={700} height={400} title={"D3 도넛"}/>,
+                document.getElementById("donut-chart")
+            );
+            break;
+
 
         case 44:
 
@@ -131,9 +147,17 @@ slideShow.on('hideSlide', function (slide) {
             ReactDOM.unmountComponentAtNode(document.getElementById("svg-area"));
             break;
 
+
+        case 66:
+            ReactDOM.unmountComponentAtNode(document.getElementById("easing-chart"));
+            break;
+        case 72:
+            ReactDOM.unmountComponentAtNode(document.getElementById("pie-chart"));
+            break;
+        case 73:
+            ReactDOM.unmountComponentAtNode(document.getElementById("donut-chart"));
+            break;
     }
-
-
 });
 
 
@@ -144,3 +168,14 @@ var addBarchartData = function (data, len) {
     return data;
 };
 
+
+d3.selectAll(".layout li")
+    .on("click", function () {
+        var layout = d3.select(this).attr("class");
+        if (layout) {
+            d3.select("#layout")
+                .attr("src", "src/img/" + layout + ".png");
+            d3.select("#layout-id")
+                .text(layout[0].toUpperCase() + layout.substr(1));
+        }
+    });

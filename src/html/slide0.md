@@ -446,7 +446,7 @@ class: middle, center
 
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:537px;text-align:center;">
-    <img style="width:100%" src="src/img/treemap.png"/>
+    <img style="width:100%" src="src/img/treemap-chart.png"/>
 </span>
 </p>
 
@@ -472,7 +472,7 @@ class: middle, center
     <img style="width:100%" src="src/img/zoomable-sunburst.png"/>
     </span>
     <span style="width:34%;float:left;">
-    <img style="width:100%" src="src/img/partition.png"/>
+    <img style="width:100%" src="src/img/partition-diagram.png"/>
     </span>
 </span>
 </p>
@@ -943,7 +943,14 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
 
 ---
 
-### 
+### 데이터 바인딩
+
+
+---
+
+### Enter, Update, Exit
+
+
 
 ---
 
@@ -1109,13 +1116,12 @@ xAxis(svg.append("g"))
 }
 ```
 
-
 ---
 
 ### Transition
 
-<p>- 실제 데이터는 시간에 따라서 변화한다. (Update)</p>
-<p>-시각적 인지를 위해 모션을 통한 트랜지션 사용 가능</p>
+<p>- 실제 데이터는 시간에 따라서 변화(Update)</p>
+<p>- 시각적 인지를 위해 모션을 통한 트랜지션 사용 가능</p>
 
 ```javascript
 svg.selectAll("rect")
@@ -1132,40 +1138,188 @@ svg.selectAll("rect")
     });
 ```
 
+- .duration()<br>
+.transition()의 지속 시간을 설정(단위: ms, 기본값: 250ms)
+- .delay()<br>
+.transition()의 지연시간 설정(단위: ms)
+
 ---
 
-### Easing
+### Transition Test
 
-<p>- 트랜지션에 사용되는 모션의 특징(기본값: cubic-in-out)</p>
+
+
+---
+
+
+### 이징(Easing)
+
+<p>- 트랜지션에 사용되는 모션의 특징(기본값: cubic)</p>
 ```javascript
-...
     .transition()
-    .duration(1000)
+    .duration(2000)
 *    .ease("linear")
-...// attr() 을 사용한 구문 
+...// attr() 으로 속성 변경 
 ```
 
 <div id="easing-chart"></div>
 
+???
+모션의 변동 비율이 일정하지 않고 가변적이다.<br>
+트랜지션에 사용된느 모션의 특징을 이징이라고 한다.
 
 ---
-- 브라우저에서 지원하는 표준 이벤트만 인식
+
+
+### 상호작용(이벤트)
+
+<p>- 특정 문서 요소와 이벤트 바인딩</p>
+<p>- 브라우저에서 지원하는 표준 이벤트만 인식
 <span style="font-size:13px;">(<a href="http://quirksmode.org/dom/events/">http://quirksmode.org/dom/events/</a>)</span>
-- 특정 문서 요소와 이벤트 바인딩
-
-### ㄹㄴㅇㄹ
-
----
-
-### 상호작용
-
-<p>
 </p>
 
 ```javascript
-d3.select("p")
-    .on("click", function() {
+d3.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    ... // 속성 지정(생략)
+    .on("mouseover", function(d) {
         // 클릭 시 수행될 작업
+        d3.select(this)
+          .attr("fill", "orange");
+    })
+    .on("mouseout", function(d) {
+        d3.select(this)
+            attr("fill", "rgb(0, 0, " + (d * 10) + ")");
     });
 ```
+
+---
+
+### 상호작용 테스트
+
+
+
+---
+
+### 레이아웃
+
+<p>- 특정 형태의 시각화에 맞는 새로운 데이터를 생성</p>
+<p>
+- <a href="https://github.com/mbostock/d3/wiki/Layouts">https://github.com/mbostock/d3/wiki/Layouts</a>
+</p>
+
+<br>
+
+<div>
+    <div style="width:40%;border:0px solid black;float:left">
+        <ul class="layout">
+            <li class="bundle" style="cursor:help;">번들(Bundle)</li>
+            <li class="chord" style="cursor:help;">커드(Chord)</li>
+            <li class="cluster" style="cursor:help;">클러스터(Cluster)</li>
+            <li class="force" style="cursor:help;">포스(Force)</li>
+            <li>히스토그램(Histogram)</li>
+            <li class="pack" style="cursor:help;">팩(Pack)</li>
+            <li class="partition" style="cursor:help;">파티션(Partition)</li>
+            <li class="pie" style="cursor:help;">파이(Pie)</li>
+            <li class="stack" style="cursor:help;">스택(Stack)</li>
+            <li class="tree" style="cursor:help;">트리(Tree)</li>
+            <li class="treemap" style="cursor:help;">트리맵(Treemap)</li>
+        </ul>
+    </div>
+    <div style="float:left">
+        <p>
+        <img id="layout" src="src/img/bundle.png" />
+        <br/>
+        <span id="layout-id" style="font-size:13px">Bundle</span>
+        </p>
+    </div>
+</div>
+
+
+---
+
+### 파이(Pie) 레이아웃
+
+```javascript
+var dataset = [5, 10, 20, 45, 6, 25];
+var pie = d3.layout.pie();
+console.log(pie(dataset));
+```
+
+<p style="text-align:center;">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:800;text-align:center;">
+<img style="width:100%" src="src/img/pie-layout.png">
+</span>
+</p>
+
+---
+
+### 원그래프
+
+```javascript
+var w = 300, h = 300;
+var outerRadius = w /2, innerRadius = 0;
+
+var arc = d3.svg.arc()
+            .innerRadius(innerRadius)
+            .outerRadius(outerRadius);
+            
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+            
+var arcs = svg.selectAll("g.arc")
+*            .data(pie(dataset))
+            .enter()
+            .append("g")
+            .attr("class", "arc")
+            .attr("transform", "translate(" + [outerRadius, outerRadius] + ")");
+            
+arcs.append("path")
+            .attr("fill", function(d, i) {
+                return color(i);
+            })
+            .attr("d", arc);
+            
+```
+
+---
+
+### 원그래프
+
+<br>
+<br>
+<div id="pie-chart"></div>
+
+
+---
+
+### 도넛그래프
+
+```javascript
+var arc = d3.svg.arc()
+*            .innerRadius(100)
+            .outerRadius(outerRadius);
+```
+
+<br>
+<div id="donut-chart"></div>
+
+---
+
+class: middle, center
+
+# 끝
+
+
+
+
+
+
+
+
+
 

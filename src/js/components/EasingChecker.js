@@ -70,7 +70,7 @@ class EasingChecker extends Component {
             .on("click", function (d) {
                 d3.select(this)
                     .transition()
-                    .duration(1000)
+                    .duration(2000)
                     .ease(d)
                     .attr("cx", width - r)
                     .each("end", function () {
