@@ -10,8 +10,16 @@ class BasicBarChart extends React.Component {
         super();
 
         this.state = {
-            data: [10, 16, 17, 18, 20, 21, 23, 28, 34, 60, 61, 62, 68, 82, 89, 94]
+            data: []
         }
+    }
+
+    componentWillMount() {
+
+        let arr = d3.range(15).map(() => 0 | Math.random() * 100 + 10)
+        this.setState({
+            data: arr
+        });
     }
 
     componentDidMount() {
@@ -60,8 +68,8 @@ class BasicBarChart extends React.Component {
 
         let xAxis = d3.svg.axis()
             .scale(xScale)
-            .orient("bottom")
-            .tickFormat(i=>data[i]);
+            .orient("bottom");
+        //.tickFormat(i=>data[i]);
 
         let yAxis = d3.svg.axis()
             .scale(yScale)

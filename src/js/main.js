@@ -38,7 +38,7 @@ slideShow.on('beforeShowSlide', function (slide) {
     console.log("Show Slide:", currentPage);
     switch (currentPage) {
 
-        case 18:
+        case 19:
             ReactDOM.render(
                 <div>
                     <BasicBarChart width={345} height={300} style={{width:"50%",float:"left"}}/>
@@ -47,12 +47,6 @@ slideShow.on('beforeShowSlide', function (slide) {
                 document.getElementById("barchart")
             );
             break;
-
-        case 19:
-            ReactDOM.render(
-                <StackedBarChart />,
-                document.getElementById("stackedchart")
-            );
         case 43:
             ReactDOM.render(
                 <CanvasBarChart width={330} height={200}/>,
@@ -135,13 +129,9 @@ slideShow.on('hideSlide', function (slide) {
     console.log("Hide Slide:", currentPage);
 
     switch (currentPage) {
-        case 18:
+        case 19:
             ReactDOM.unmountComponentAtNode(document.getElementById("barchart"));
             break;
-        case 19:
-            ReactDOM.unmountComponentAtNode(document.getElementById("stackedchart"));
-            break;
-
         case 43:
             ReactDOM.unmountComponentAtNode(document.getElementById("canvas-area"));
             ReactDOM.unmountComponentAtNode(document.getElementById("svg-area"));

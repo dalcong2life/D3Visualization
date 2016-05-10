@@ -66,14 +66,36 @@ class: middle, center
 가공되지 않은 데이터를 사람이 이해하기 쉬운 시각적 형태로 변환하고 
 이를 활용해서 비즈니스를 성공적으로 수행하는데 도움을 줄 수 있다.
 </p>
-
-
 </div>
+
+???
+주 목적은 정보를 명료하고 효과적으로 소통할 수 있도록 데이터를 나타내는것이다
+
 
 
 ---
 
-### 데이터 시각화란 용어가 사용되기 시작한 시기
+### 데이터 시각화의 역사 
+
+<p>- 1786년 윌리엄 플레이페어(William Playfair)가 출간한 "경제와 정치의 지도라는 수출입 기록을 연도별로 정리한 책에서 막대그래프와 꺾은선그래프를 처음 사용</p>
+
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/WilliamPlayfair.png"/>
+    </span>
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/WilliamPlayfair1.png"/>
+    </span>
+</span>
+</p>
+
+
+
+---
+
+### 데이터 시각화란 용어가 처음 사용된 시기
 
 <p style="margin-top:120px;">
 <span style="display:inline-block;background:#eee;padding:10px 10px 5px 10px;">
@@ -260,6 +282,10 @@ class: middle, center
 </tbody>
 </table>
 
+???
+시계열 데이터와 장르별 매출 데이터 앙케이트 결과등은 배열로 중첩 구조로 된 트리나 소셜 네트워크의 인간관계 웹페이지 액세스 흐름등은 그래프 구조
+
+
 ---
 
 ### 배열 데이터를 표현하는 차트(그래프)
@@ -295,6 +321,11 @@ class: middle, center
 
 <div id="barchart"></div>
 
+???
+X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br>
+이산값 => 카테고리<br>
+순서값 => 월별분기별 매출 월별 기온 등
+
 ---
 
 ### 누적 막대그래프
@@ -303,7 +334,17 @@ class: middle, center
 <p>- 전체량과 동시에 하나의 막대를 구성하는 내용을 시각화</p>
 <br>
 
-<div id="stackedchart"></div>
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/stackchart1.png"/>
+    </span>
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/normalizedstatckchart.png"/>
+    </span>
+</span>
+</p>
 
 
 ???
@@ -320,6 +361,15 @@ class: middle, center
 <p>- 계급: 보고 싶은 데이터의 범위</p>
 <p>- 도수: 계급에 포함되는 데이터 개수</p>
 
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:100%" src="src/img/histogramchart.png"/>
+    </span>
+   
+</span>
+</p>
 
 
 ---
@@ -329,6 +379,16 @@ class: middle, center
 <p>- 한 방향으로 진행하며 서서히 좁아지는(감소) 데이터를 시각화</p>
 <p>- 단계별 인수 분석에 이용</p>
 
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:100%" src="src/img/funnelchart.png"/>
+    </span>
+   
+</span>
+</p>
+
 
 
 ---
@@ -336,9 +396,17 @@ class: middle, center
 ### 꺾은선그래프
 
 <p>- 데이터를 점으로 표시하고 그 점을 선으로 연결하여 하나의 계열로 표현</p>
-<p>- 베이스라인이나 트렌드 파악에 적합</p>
+<p>- 베이스라인이나 트렌드 파악에 적합하고 값 예측 등에 이용</p>
 
-
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:100%" src="src/img/linechart.png"/>
+    </span>
+   
+</span>
+</p>
 
 ---
 
@@ -348,7 +416,17 @@ class: middle, center
 <p>- 평행선은 각각 하나의 속성값을 일차원으로 표현하며 많은 속성값을 동시에 표현 가능</p>
 <p>- 전체 경향을 파악할 수 있을 뿐만 아니라 특정 관점으로 선의 색을 구분하여 특정 집단에서의 경향을 쉽게 분석 가능</p>
 
-
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/parallelchart.png"/>
+    </span>
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/radarchart.png"/>
+    </span>
+</span>
+</p>
 
 ---
 
@@ -356,6 +434,17 @@ class: middle, center
 
 <p>- 선그래프를 누적해서 면으로 표현한 그래프</p>
 <p>- 시계열 데이터 등 주로 연속적인 변화 표현에 적합</p>
+<p>- 값의 통계나 비율 변화 표현에 적합</p>
+
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:100%" src="src/img/stackareachart.png"/>
+    </span>
+   
+</span>
+</p>
 
 
 ---
@@ -367,6 +456,17 @@ class: middle, center
 <p>- 각도와 면적을 정확히 비교하기 힘들기 때문에 사용 자제</p>
 <p>- 누적 그래프(띠그래프)로 대체 가능</p>
 
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/piechart1.png"/>
+    </span>
+    <span style="width:50%;float:left;">
+    <img style="width:100%" src="src/img/piechart2.png"/>
+    </span>
+</span>
+</p>
 
 ???
 도넛그래프는 원그래프 가운데가 뚫린 그래프로 중앙의 빈자리에 설명이나 합계 표현
@@ -377,6 +477,16 @@ class: middle, center
 
 <p>- 최솟값, 1사분위, 중앙값, 3사분위, 최대값을 동시에 표현할 수 있는 그래프</p>
 
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:700px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:80%" src="src/img/boxplot.png"/>
+    </span>
+   
+</span>
+</p>
+
 ???
 히스토그램과는 다르게 집단이 여러개인 경우에도 한 공간에 수월하게 표현 가능
 
@@ -385,6 +495,16 @@ class: middle, center
 ### 산포도
 <p>- X축과 Y축으로 두 데이터 사이의 관계성을 표현</p>
 <p>- 상관관계 유무 등을 볼 수 있으므로 데이터의 기본적인 성질을 파악하는데 이용</p>
+
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:100%" src="src/img/scatterchart1.png"/>
+    </span>
+   
+</span>
+</p>
 
 ---
 
@@ -409,7 +529,15 @@ class: middle, center
 <p>- 점을 원으로 그려 반지름으로 수치를 표현</p>
 <p>- X축, Y축, 반지름으로 세 가지 수치 데이터 표현</p>
 
-<div id="bubble-chart"></div>
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:100%" src="src/img/bubblechart.png"/>
+    </span>
+   
+</span>
+</p>
 
 ---
 
@@ -512,9 +640,11 @@ Google Analyics의 유저 플로우<br>
 <p>- 인맥 등이 나타나는 소셜 그래프나 사용자가 대상에 하는 행위 등을 시각화할 때 사용</p>
 
 
-<div width="100%">
-<canvas id="force-chart" width="800" height="500"></canvas>
-</div>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:637px;text-align:center;">
+    <img style="width:70%" src="src/img/forcedirectedchart.png"/>
+</span>
+</p>
 
 
 ---
@@ -545,6 +675,15 @@ class: middle, center
 <p>- 복수의 원그래프를 비교하기 어렵다.</p>
 <p>- 위 두 문제를 해결한 띠그래프와 막대그래프를 사용하라.</p>
 
+<br>
+<p style="text-align:center">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
+    <span style="width:100%;float:left;">
+    <img style="width:100%" src="src/img/multipiechart.png"/>
+    </span>
+   
+</span>
+</p>
 
 ???
 사람의 눈은 길이보다 면적을 이해하기가 어렵고 각도도 정확히 인식하기 어렵기 때문에, 
