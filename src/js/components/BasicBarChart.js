@@ -63,8 +63,23 @@ class BasicBarChart extends React.Component {
                 width: () => xScale.rangeBand(),
                 height: (d) => height - yScale(d),
                 fill: color
-            }
-        );
+            })
+            .on("mouseover", function (d) {
+                var xPosition = parseFloat(d3.select(this).attr("x")) + width/4;
+                var yPosition = parseFloat(d3.select(this).attr("y")) + height*2;
+
+                console.log(yPosition);
+                d3.select("#tooltip")
+                    .style("left", xPosition + "px")
+                    .style("top", yPosition + "px")
+                    .select("#value")
+                    .text(d);
+
+                d3.select("#tooltip").classed("hidden", false);
+            })
+            .on("mouseout", function (d) {
+                d3.select("#tooltip").classed("hidden", true);
+            });
 
         let xAxis = d3.svg.axis()
             .scale(xScale)

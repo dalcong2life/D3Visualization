@@ -1,3 +1,5 @@
+"use strict";
+
 import d3 from "d3";
 import React from "react";
 import ReactDOM from "react-dom";
@@ -8,6 +10,9 @@ import StackedBarChart from "./components/StackedBarChart";
 import CanvasBarChart from "./components/CanvasBarChart";
 import EasingChecker from "./components/EasingChecker";
 import PieChart from "./components/PieChart";
+import ScatterChart from "./components/ScatterChart";
+import BarcodeChart from "./components/BarcodeChart";
+import ForceChart from "./components/ForceChart";
 
 
 remark.macros.scale = function (percentage) {
@@ -34,10 +39,8 @@ var getEl = document.getElementById.bind(document);
 
 slideShow.on('beforeShowSlide', function (slide) {
     var currentPage = slide.getSlideIndex() + 1;
-
     console.log("Show Slide:", currentPage);
     switch (currentPage) {
-
         case 19:
             ReactDOM.render(
                 <div>
@@ -47,7 +50,7 @@ slideShow.on('beforeShowSlide', function (slide) {
                 document.getElementById("barchart")
             );
             break;
-        case 43:
+        case 44:
             ReactDOM.render(
                 <CanvasBarChart width={330} height={200}/>,
                 document.getElementById("canvas-area")
@@ -58,67 +61,60 @@ slideShow.on('beforeShowSlide', function (slide) {
                 document.getElementById("svg-area")
             );
             break;
-
         case 66:
+            ReactDOM.render(
+                <ScatterChart/>,
+                document.getElementById("scatter-chart")
+            );
+            break;
+        case 68:
+            ReactDOM.render(
+                <ScatterChart width={600} height={200} style={"axis"}/>,
+                document.getElementById("style-scatter")
+            );
+            break;
+        case 70:
+            ReactDOM.render(
+                <BarcodeChart height={100}/>,
+                document.getElementById("transition-barchart1")
+            );
+
+            ReactDOM.render(
+                <BarcodeChart height={100} isStacked={true}/>,
+                document.getElementById("transition-barchart2")
+            );
+            break;
+        case 71:
             ReactDOM.render(
                 <EasingChecker/>,
                 document.getElementById("easing-chart")
             );
             break;
 
-        case 72:
+        case 74:
+            ReactDOM.render(
+                <BasicBarChart width={700} height={200}/>,
+                document.getElementById("tooltip-barchart")
+            );
+            break;
+        case 78:
             ReactDOM.render(
                 <PieChart width={700} height={400} outerRadius={200}/>,
                 document.getElementById("pie-chart")
             );
             break;
-        case 73:
+        case 79:
             ReactDOM.render(
                 <PieChart innerRadius={100} outerRadius={200} width={700} height={400} title={"D3 도넛"}/>,
                 document.getElementById("donut-chart")
             );
             break;
-
-
-        case 44:
-
-            //var base = d3.select("#canvas-area");
-            //var chart = base.append("canvas")
-            //    .attr("width", 200)
-            //    .attr("height", 100);
-            //
-            //var context = chart.node().getContext("2d");
-            //var data = [1, 2, 13, 20, 23];
-            //
-            //var scale = d3.scale.linear()
-            //    .range([10, 390])
-            //    .domain([1, 23]);
-            //
-            //data.forEach(function (d, i) {
-            //    context.beginPath();
-            //    context.rect(scale(d), 150, 10, 10);
-            //    context.fillStyle = "red";
-            //    context.fill();
-            //    context.closePath();
-            //});
-            //
-            //d3.json('../../data/miserables.json', function (error, graph) {
-            //    if (error) {
-            //        return error;
-            //    }
-            //    var chart = Chart.ForceDirectedGraph()
-            //        .width(400)
-            //        .height(130);
-            //
-            //    d3.select('#svg-area')
-            //        .data([graph])
-            //        .call(chart);
-            //});
-
-
+        case 82:
+            ReactDOM.render(
+                <ForceChart/>,
+                document.getElementById("force-chart")
+            );
             break;
-        default :
-            console.log('default');
     }
 });
 
@@ -132,20 +128,34 @@ slideShow.on('hideSlide', function (slide) {
         case 19:
             ReactDOM.unmountComponentAtNode(document.getElementById("barchart"));
             break;
-        case 43:
+        case 44:
             ReactDOM.unmountComponentAtNode(document.getElementById("canvas-area"));
             ReactDOM.unmountComponentAtNode(document.getElementById("svg-area"));
             break;
-
-
         case 66:
+            ReactDOM.unmountComponentAtNode(document.getElementById("scatter-chart"));
+            break;
+        case 68:
+            ReactDOM.unmountComponentAtNode(document.getElementById("style-scatter"));
+            break;
+        case 70:
+            ReactDOM.unmountComponentAtNode(document.getElementById("transition-barchart1"));
+            ReactDOM.unmountComponentAtNode(document.getElementById("transition-barchart2"));
+            break;
+        case 71:
             ReactDOM.unmountComponentAtNode(document.getElementById("easing-chart"));
             break;
-        case 72:
+        case 74:
+            ReactDOM.unmountComponentAtNode(document.getElementById("tooltip-barchart"));
+            break;
+        case 78:
             ReactDOM.unmountComponentAtNode(document.getElementById("pie-chart"));
             break;
-        case 73:
+        case 79:
             ReactDOM.unmountComponentAtNode(document.getElementById("donut-chart"));
+            break;
+        case 82:
+            ReactDOM.unmountComponentAtNode(document.getElementById("force-chart"));
             break;
     }
 });

@@ -361,7 +361,6 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 <p>- 계급: 보고 싶은 데이터의 범위</p>
 <p>- 도수: 계급에 포함되는 데이터 개수</p>
 
-<br>
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:100%;float:left;">
@@ -398,7 +397,6 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 <p>- 데이터를 점으로 표시하고 그 점을 선으로 연결하여 하나의 계열로 표현</p>
 <p>- 베이스라인이나 트렌드 파악에 적합하고 값 예측 등에 이용</p>
 
-<br>
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:100%;float:left;">
@@ -410,7 +408,7 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 
 ---
 
-### 평행형 / 방사형 차트
+### 평행형(Parallel) / 방사형(Radar) 차트
 
 <p>- 평행으로 그은 복수의 직선에 데이터의 속성값을 플롯하여 한 줄로 연결해서 표현</p>
 <p>- 평행선은 각각 하나의 속성값을 일차원으로 표현하며 많은 속성값을 동시에 표현 가능</p>
@@ -436,7 +434,6 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 <p>- 시계열 데이터 등 주로 연속적인 변화 표현에 적합</p>
 <p>- 값의 통계나 비율 변화 표현에 적합</p>
 
-<br>
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:100%;float:left;">
@@ -456,7 +453,6 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 <p>- 각도와 면적을 정확히 비교하기 힘들기 때문에 사용 자제</p>
 <p>- 누적 그래프(띠그래프)로 대체 가능</p>
 
-<br>
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:50%;float:left;">
@@ -477,11 +473,10 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 
 <p>- 최솟값, 1사분위, 중앙값, 3사분위, 최대값을 동시에 표현할 수 있는 그래프</p>
 
-<br>
 <p style="text-align:center">
-<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:700px;text-align:center;">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:500px;text-align:center;">
     <span style="width:100%;float:left;">
-    <img style="width:80%" src="src/img/boxplot.png"/>
+    <img style="width:100%" src="src/img/boxplot.png"/>
     </span>
    
 </span>
@@ -496,7 +491,6 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 <p>- X축과 Y축으로 두 데이터 사이의 관계성을 표현</p>
 <p>- 상관관계 유무 등을 볼 수 있으므로 데이터의 기본적인 성질을 파악하는데 이용</p>
 
-<br>
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:100%;float:left;">
@@ -529,7 +523,6 @@ X축은 이산적인 값 또는 순서가 있는 값을 사용할 수 있다.<br
 <p>- 점을 원으로 그려 반지름으로 수치를 표현</p>
 <p>- X축, Y축, 반지름으로 세 가지 수치 데이터 표현</p>
 
-<br>
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:100%;float:left;">
@@ -641,8 +634,8 @@ Google Analyics의 유저 플로우<br>
 
 
 <p style="text-align:center">
-<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:637px;text-align:center;">
-    <img style="width:70%" src="src/img/forcedirectedchart.png"/>
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:400px;text-align:center;">
+    <img style="width:100%" src="src/img/forcedirectedchart.png"/>
 </span>
 </p>
 
@@ -733,10 +726,10 @@ class: middle, center
 
 ---
 
-### D3 소개
+### D3(Data Driven Document) 소개
 
 <p>- 데이터 시각화 제작을 위한 자바스크립트 라이브러리</p>
-<p>- 웹 문서를 데이터 중심으로 다룰 수 있음(Data Driven Document)</p>
+<p>- 웹 문서를 데이터 중심으로 다룰 수 있음</p>
 <p>- 마이크 보스탁(Mike Bostock, http://bost.ocks.org/mike)</p>
 <p>- BSD 라이선스</p>
 <p>- http://www.d3js.org</p>
@@ -839,7 +832,7 @@ DOM과 동일한 요소로 취급되기 때문에 디버그 하기 쉽다
 
 ---
 
-### SVG 문서요소 - 사각형
+### SVG 문서요소 - 사각형(Rectangle)
 
 ```xml
 <rect x="0" y="0" width="600" height="80" />
@@ -874,7 +867,7 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 ---
 
-### SVG 문서요소 - 원
+### SVG 문서요소 - 원(Circle)
 
 ```xml
 <circle cx="100" cy="100" r="100" 
@@ -889,7 +882,7 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 </div>
 ---
 
-### SVG 문서요소 - 타원
+### SVG 문서요소 - 타원(Ellipse)
 
 ```xml
 <ellipse cx="100" cy="100" rx="200" ry="50" 
@@ -909,7 +902,7 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 ---
 
-### SVG 문서요소 - 선
+### SVG 문서요소 - 선(Line)
 
 ```xml
 <line x1="0" y1="0" x2="500" y2="200" 
@@ -925,6 +918,56 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 </div>
 
 ---
+
+### SVG 문서요소 - 다각형(Polygon)
+
+```xml
+<polygon points="200,10 250,190 160,210" 
+                      style="fill:lime;stroke:purple;stroke-width:2" />
+```
+<div style="background-color:#eee;height:320px;">
+<svg width="748" height="500">
+   <g transform="translate(100,50)">
+   <polygon points="200,10 250,190 160,210" 
+                      style="fill:lime;stroke:purple;stroke-width:2" />
+   </g>
+</svg> 
+</div>
+
+---
+
+### SVG 문서요소 - Path
+
+```xml
+<path d="M150 0 L75 200 L225 200 Z" 
+                        stroke="red" stroke-width="5" fill="#eee"/>
+```
+<div style="background-color:#eee;height:320px;">
+<svg width="748" height="500">
+   <g transform="translate(100,50)">
+   <path d="M150 0 L75 200 L225 200 Z" stroke="red" stroke-width="5" fill="#eee"/>
+   </g>
+</svg> 
+</div>
+
+---
+
+### SVG 문서요소 - Text
+
+```xml
+<text x="0" y="15" fill="red">I love SVG!</text>
+```
+<div style="background-color:#eee;height:320px;">
+<svg width="748" height="500">
+   <g transform="translate(100,50)">
+   <text x="0" y="15" fill="red">I love SVG!</text>
+   </g>
+</svg> 
+</div>
+
+---
+
+
 
 ### SVG 문서요소 - 컨테이너 요소
 
@@ -1082,13 +1125,57 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
 
 ---
 
-### 데이터 바인딩
+### 기본이 되는 API
 
+<p>- d3.select(selector)</p>
+&nbsp;&nbsp;: selector에 해당하는 단일 DOM 요소 선택
+<p>- d3.selectAll(selector)</p>
+&nbsp;&nbsp;: selector에 해당하는 모든 DOM 요소 선택
+<p>- selection.attr(name[,value])</p>
+&nbsp;&nbsp;: DOM 속성 조회 또는 설정
+<p>- selection.style(name[,value])</p>
+&nbsp;&nbsp;: DOM 스타일 조회 또는 설정
+<p>- selection.text([value])</p>
+&nbsp;&nbsp;: DOM 텍스트 조회 또는 설정
+<p>- selection.data([values[,key]])</p>
+&nbsp;&nbsp;: d3.select 또는 d3.selectAll로 선택한 DOM에 데이터 배열을 연결(binding)
 
 ---
 
 ### Enter, Update, Exit
 
+
+.left-column[
+<p>- selection.enter()</p>
+
+```javascript
+svg.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect");
+```
+]
+
+.right-column[
+<p>- selection.exit()</p>
+```javascript
+svg.selectAll("rect")
+    .data(dataset)
+    .exit()
+    .remove();
+```
+]
+
+<svg width="700" height="500">
+    <circle cx="320" cy="200" r="100" fill="green" opacity="0.4"/>
+    <circle cx="420" cy="200" r="100" fill="red" opacity="0.4"/>
+    <text x="280" y="210" text-anchor="middle" style="font-family:sans-serif" fill="brown">enter</text>
+    <text x="370" y="210" text-anchor="middle" style="font-family:sans-serif" fill="brown">update</text>
+    <text x="460" y="210" text-anchor="middle" style="font-family:sans-serif" fill="brown">exit</text>
+    <text x="300" y="90" text-anchor="middle" style="font-family:sans-serif" >데이터</text>
+    <text x="440" y="90" text-anchor="middle" style="font-family:sans-serif" >DOM</text>
+    
+</svg>
 
 
 ---
@@ -1098,7 +1185,7 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
 
 <p>- 입력되는 정의역(domain)과 출력되는 치역(range)을 매핑한 함수</p>
 <p>- 데이터 값을 시각화에 필요한 적절한 값(비율)로 매핑</p>
-<br>
+
 
 <div style="background-color:#eee;height:320px;">
 <svg width="748" height="500">
@@ -1119,8 +1206,18 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
    <text x="235" y="120" font-size="15">180</text>
    <text x="440" y="120" font-size="15">350</text>
    </g>
+   <text x="255" y="70" font-size="15">입력되는 데이터 값의 범위</text>
+   <text x="300" y="90" font-size="15">.domain([a,b])</text>
+   <text x="305" y="170" font-size="15">출력되는 범위</text>
+   <text x="310" y="190" font-size="15">.range([a,b])</text>
 </svg> 
 </div>
+
+```javascript
+var xScale = d3.scale.linear()
+                          .domain([100, 500])
+                          .range([10, 350);
+```
 
 ---
 ### D3에서 제공하는 척도의 종류
@@ -1205,6 +1302,8 @@ console.log(scale(-100));    // 10
 <p>- 척도와 형태가 유사</p>
 <p>- 어떤 값을 반환하는 대신에 선과 라벨, 구분자를 가진 시각적 요소가 생성</p>
 
+<div id="scatter-chart"></div>
+
 ---
 
 ### 축 생성 방법
@@ -1246,14 +1345,16 @@ xAxis(svg.append("g"))
 .axis line {
     fill: none;
     stroke: black;
-    shape-rendering: crispEdges;
+*    shape-rendering: crispEdges;
 }
-
 .axis text {
     font-family: sans-serif;
     font-size: 11px;
 }
 ```
+
+<div id="style-scatter"></div>
+
 
 ---
 
@@ -1284,9 +1385,12 @@ svg.selectAll("rect")
 
 ---
 
-### Transition Test
+### Transition 예제
 
+<p>- 바코드 차트</p>
 
+<div id="transition-barchart1"></div>
+<div id="transition-barchart2"></div>
 
 ---
 
@@ -1336,7 +1440,68 @@ d3.selectAll("rect")
 
 ---
 
-### 상호작용 테스트
+### 상호작용 - 툴팁 예제
+
+```html
+[html]
+<div id="tooltip" class="hidden">
+    <p><strong>Important Label Heading</strong></p>
+    <p><span id="value">100</span>%</p>
+</div>
+[css]
+#tooltip {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+#tooltip.hidden {
+    display: none;
+}
+#tooltip.p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+```
+
+
+
+---
+
+### 상호작용 - 툴팁 예제
+
+```javascript
+.on("mouseover", function(d) {
+    d3.select("#tooltip")
+    .style("left", xPosition + "px")
+    .style("top", yPosition + "px")
+    .select("#value")
+    .text(d);
+    
+    d3.select("#tooltip").classed("hidden", false);
+})
+.on("mouseout", function(d) {
+    d3.select("#tooltip").classed("hidden", true);
+});
+```
+
+<div id="tooltip-barchart"></div>
+
+
+<div id="tooltip" class="hidden">
+    <p><strong>Important Label Heading</strong></p>
+    <p><span id="value">100</span>%</p>
+</div>
+
+
+
+
 
 
 
@@ -1404,9 +1569,10 @@ var outerRadius = w /2, innerRadius = 0;
 var arc = d3.svg.arc()
             .innerRadius(innerRadius)
             .outerRadius(outerRadius);
+
+*var pie = d3.layout.pie();            
             
-var svg = d3.select("body")
-            .append("svg")
+var svg = d3.select("body").append("svg")
             .attr("width", w)
             .attr("height", h);
             
@@ -1448,6 +1614,69 @@ var arc = d3.svg.arc()
 <div id="donut-chart"></div>
 
 ---
+
+### 포스(Force) 레이아웃
+
+<p>- 관계 데이터에 사용되고, 노드(node)와 연결(edge)로 구성</p>
+<p>- 노드 간 인력과 척력으로 상태 유지</p>
+
+```javascript
+var force = d3.layout.force()
+               .nodes(dataset.nodes)
+               .links(dataset.edges)
+               .size([w, h])
+               .linkDistance([50]) // 노드 사이의 연결선 길이
+               .charge([-30])   // 노드 사이의 반발력(기본값: -30)
+               .start();
+```
+
+<p style="text-align:center;">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:500;text-align:center;">
+<img style="width:100%" src="src/img/force-data.png">
+</span>
+</p>
+
+---
+
+### 포스(Force) 레이아웃
+
+```javascript
+var edges = svg.selectAll("line") 
+                .data(dataset.edges)
+                .enter()
+                .append("line")
+                .attr({ "stroke", "#ccc", "stroke-width", 1 });
+var nodes = svg.selectAll("circle")
+                .data(dataset.nodes)
+                .enter()
+                .append("circle")
+                .attr({ "r": 10, "fill": "#eee" })
+                .call(force.drag); // 노드를 드래그 앤 드롭 가능하게 함
+
+force.on("tick", function() { // 매 순각(tick)마다 노드, 연결선의 x, y 값 갱신
+    edges.attr("x1", function(d) { return d.source.x; })
+         .attr("y1", function(d) { return d.source.y; })
+         .attr("x2", function(d) { return d.target.x;})
+         .attr("y2", function(d) { return d.target.y;});
+         
+    nodes.attr("cx", function(d) { return d.x; })
+         .attr("cy", function(d) { return d.y; });   
+});
+                
+```
+
+
+---
+
+
+
+### 포스(Force) 레이아웃
+
+<p>- 브라우저 점유율</p>
+<div id="force-chart"></div>
+
+---
+
 
 class: middle, center
 
