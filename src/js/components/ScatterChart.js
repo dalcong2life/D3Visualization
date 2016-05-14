@@ -66,7 +66,7 @@ class ScatterChart extends Component {
                 return yScale(d[1]);
             })
             .attr("r", 4)
-            .attr("fill", "pink")
+            .attr("fill", "teal")
             .attr("title", function (d) {
                 return d[0] + "," + d[1];
             });

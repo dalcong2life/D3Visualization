@@ -79,9 +79,12 @@ class PieChart extends Component {
             .text(d => d.value);
 
         if (innerRadius > 0) {
-            this.canvas.selectAll("text.title")
-                .data([0])
-                .enter()
+            let title = this.canvas
+                .selectAll("text.title")
+                .data([d3.sum(data)])
+
+
+            title.enter()
                 .append("text")
                 .attr("class", "title")
                 .attr({
@@ -90,7 +93,16 @@ class PieChart extends Component {
                     dy: 15,
                     "text-anchor": "middle"
                 })
-                .text(this.props.title);
+                .text(function (d) {
+                    return "총계:" + d;
+                });
+
+            title
+                .transition()
+                .duration(1500)
+                .text(function (d) {
+                return "총계:" + d;
+            });
         }
 
         arcs.each(function (d, i) {

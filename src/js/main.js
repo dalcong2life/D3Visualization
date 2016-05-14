@@ -4,6 +4,7 @@ import d3 from "d3";
 import React from "react";
 import ReactDOM from "react-dom";
 
+import TrianglesChart from './components/TrianglesChart';
 import BasicBarChart from "./components/BasicBarChart";
 import DualBarChart from "./components/DualBarChart";
 import StackedBarChart from "./components/StackedBarChart";
@@ -41,11 +42,17 @@ slideShow.on('beforeShowSlide', function (slide) {
     var currentPage = slide.getSlideIndex() + 1;
     console.log("Show Slide:", currentPage);
     switch (currentPage) {
+        case 1:
+            ReactDOM.render(
+                <TrianglesChart/>,
+                document.getElementById('mainchart')
+            );
+            break;
         case 19:
             ReactDOM.render(
                 <div>
-                    <BasicBarChart width={345} height={300} style={{width:"50%",float:"left"}}/>
-                    <DualBarChart width={345} height={300} style={{width:"50%",float:"left"}}/>
+                    <BasicBarChart width={345} height={300} style={{ width:"50%",float:"left"}}/>
+                    <DualBarChart width={345} height={300} style={{ width:"50%",float:"left"}}/>
                 </div>,
                 document.getElementById("barchart")
             );
@@ -125,6 +132,9 @@ slideShow.on('hideSlide', function (slide) {
     console.log("Hide Slide:", currentPage);
 
     switch (currentPage) {
+        case 1:
+            ReactDOM.unmountComponentAtNode(document.getElementById("mainchart"));
+            break;
         case 19:
             ReactDOM.unmountComponentAtNode(document.getElementById("barchart"));
             break;
@@ -179,3 +189,8 @@ d3.selectAll(".layout li")
                 .text(layout[0].toUpperCase() + layout.substr(1));
         }
     });
+
+ReactDOM.render(
+    <TrianglesChart/>,
+    document.getElementById('mainchart')
+);

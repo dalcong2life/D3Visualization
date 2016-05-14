@@ -230,3 +230,21 @@ pre {
     font-size: 16px;
     line-height: 20px;
 }
+
+.remark-slide-content {
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+rect:hover {
+    fill: orange;
+}
+
+rect {
+
+    -webkit-transition: fill 400ms;
+    -moz-transition: fill 400ms;
+    -ms-transition: fill 400ms;
+    -o-transition: fill 400ms;
+    transition: fill 400ms;
+}

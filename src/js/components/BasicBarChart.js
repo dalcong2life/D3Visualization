@@ -65,10 +65,9 @@ class BasicBarChart extends React.Component {
                 fill: color
             })
             .on("mouseover", function (d) {
-                var xPosition = parseFloat(d3.select(this).attr("x")) + width/4;
-                var yPosition = parseFloat(d3.select(this).attr("y")) + height*2;
+                var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.rangeBand() + 10;
+                var yPosition = parseFloat(d3.select(this).attr("y"));
 
-                console.log(yPosition);
                 d3.select("#tooltip")
                     .style("left", xPosition + "px")
                     .style("top", yPosition + "px")
@@ -106,8 +105,17 @@ class BasicBarChart extends React.Component {
 
         let {style} = this.props;
 
+        style['position'] = 'relative';
+
         return (
-            <div ref="content" style={style}></div>
+            <div ref="content" style={style}>
+
+                <div id="tooltip" className="hidden">
+                    <p><strong>Important Label Heading</strong></p>
+
+                    <p><span id="value">100</span>%</p>
+                </div>
+            </div>
         );
     }
 }
@@ -128,7 +136,8 @@ BasicBarChart.defaultProps = {
     margin: {top: 10, right: 10, bottom: 20, left: 30},
     width: 720,
     height: 400,
-    color: '#6C97CE'
+    color: '#6C97CE',
+    style: {}
 };
 
 export default BasicBarChart;
