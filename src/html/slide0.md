@@ -1202,7 +1202,8 @@ D3에서는 path를 쉽게 다룰 수 있도록 하는 메소드를 제공합니
 
 ]
 
-
+???
+D3를 배운다는것은 이런 일렬의 과정에 필요한 API를 습득하는 과정이라고 생각하면 됩니다.
 
 ---
 
@@ -1267,6 +1268,15 @@ var accessor = function(d) {
 };
 ```
 
+???
+D3가 다룰 수 있는 데이터 형식은 표처럼 다양하고 관련 메소드를 제공합니다.<br>
+메소드들은 비동기로 처리되기 때문에 데이터가 로딩완료 된 후에 데이터를 사용해야 되기 때문에<br> 
+콜백 메소드 내에서 로딩된 데이터를 사용해야합니다.<br>
+CSV와 TSV는 특이하게 두번째 파라미터로 accessor를 추가할 수 있는데<br> 
+이는 CSV, TSV는 불러들인 데이터의 모든 속성값이 문자열이기 때문에 <br>
+숫자데이터를 다루기 위해서는 숫자로 변환이 필요합니다.<br>
+아래와 같이 문자 속성을 숫자로 변환할 때 accessor를 사용합니다.<br>
+
 
 ---
 
@@ -1276,10 +1286,8 @@ var accessor = function(d) {
 ```javascript
 d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
     .append("rect")
-    .attr("x", 10)
-    .attr("y", 10)
-    .attr("width", 500)
-    .attr("height", 200);
+    .attr("x", 10).attr("y", 10)
+    .attr("width", 500).attr("height", 200).attr("fill", "#40718B");
 ```
 
 <p>2. 객체로 속성 지정</p>
@@ -1287,18 +1295,24 @@ d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
 d3.select('div#uid53').append("svg").attr("width", 800).attr("height", 200)
     .append("rect")
     .attr({
-        x: 10,
-        y: 10,
-        width: 500,
-        height: 200
+        x: 10, y: 10,
+        width: 500, height: 200,
+        fill: '#40718B'
     });
 ```
 
 <div id="uid53">
     <svg width="800" height="100">
-        <rect x="10" y="10" width="500" height="80">
+        <rect x="10" y="10" width="500" height="80" fill="#40718B">
     </svg>
 </div>
+
+???
+append 메소드를 이용해서 문서요소를 추가하고 attr 메소드를 이용해 속성값을 변경합니다.<br>
+D3는 jQuery 처럼 메소드 체이닝을 과하다 싶을 정도로 사용해서 설정합니다.<br>
+사실 메소드 체이닝은 여러 장점이 있는데 첫째 코드를 깔끔하게 해주고,<br> 
+두번째로 선택된 DOM을 캐시하고 있기때문에 성능이 좋아지는 장점이 있습니다.<br>
+
 
 ---
 
@@ -1354,6 +1368,10 @@ svg.selectAll("rect")
     
 </svg>
 
+???
+D3에서 가장 중요하고 이 부분만 이해하면 D3를 다 안다고 할 만큼 중요한 부분입니다.<br>
+
+
 
 ---
 
@@ -1400,9 +1418,9 @@ var xScale = d3.scale.linear()
 ### D3에서 제공하는 척도의 종류
 
 - d3.scale.linear()<br>
-<span style="font-size:20px">선형 척도</span>
+<span style="font-size:20px">- 선형 척도</span>
 - d3.scale.ordinal()<br>
-<span style="font-size:20px">- 치역이 카테고리 이름 같이 측정 불가능한 값일 경우에 사용하는 척도</span> 
+<span style="font-size:20px">- 정의역이 카테고리 이름 같이 측정 불가능한 값일 경우에 사용하는 척도</span> 
 - d3.scale.sqrt()<br>
 <span style="font-size:20px">- 제곱근 척도</span>
 - d3.scale.pow()<br>
@@ -1414,7 +1432,7 @@ var xScale = d3.scale.linear()
 - d3.scale.quantile()<br>
 <span style="font-size:20px">- 양자 척도와 비슷하지만, 정의역이 이산 값을 가짐</span>
 - d3.time.scale()<br>
-<span style="font-size:20px">날짜와 시간을 위한 척도</span>
+<span style="font-size:20px">- 날짜와 시간을 위한 척도</span>
 
  
 ---
@@ -1424,7 +1442,7 @@ var xScale = d3.scale.linear()
 - d3.scale.category20()<br>
 - d3.scale.category20b()<br>
 - d3.scale.category20c()<br>
-<span style="font-size:20px">미리 정의된 10개 또는 20개의 색상 서열 척도</span>
+<span style="font-size:20px">- 미리 정의된 10개 또는 20개의 색상 서열 척도</span>
 
 ---
 
@@ -1530,7 +1548,7 @@ xAxis(svg.append("g"))
 }
 ```
 
-<div id="style-scatter"></div>
+<div id="style-scatter" style="margin-top:-20px;"></div>
 
 
 ---
@@ -1620,22 +1638,21 @@ d3.selectAll("rect")
 
 ### 상호작용 - 툴팁 예제
 
-```html
-[html]
+```css
 <div id="tooltip" class="hidden">
     <p><strong>Important Label Heading</strong></p>
     <p><span id="value">100</span>%</p>
 </div>
-[css]
+<!- css -->
 #tooltip {
-    position: absolute;
+*   position: absolute;
     width: 200px;
     height: auto;
     padding: 10px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    pointer-events: none;
+*   pointer-events: none;
 }
 #tooltip.hidden {
     display: none;
@@ -1872,10 +1889,29 @@ class: middle, center
 
 ---
 
+### 참고한 자료
+
+<p>■ 엔지니어를 위한 데이터 시각화 (한빛리더스)</p>
+<p>■ D3.js 실시간 데이터 시각화 (에어콘출판)</p>
+<p>■ D3.js (인사이트)</p>
+<p>■ 월스트리트저널 인포그래픽 가이드 (인사이트)</p>
+<p>■ 구글</p>
+
+<p>&nbsp;</p>
+
+### 발표자료에 사용된 라이브러리
+<p>■ remark.js (http://remarkjs.com/)</p>
+<p>■ d3.js (https://d3js.org/)</p>
+<p>■ react (https://facebook.github.io/react/)</p>
+
+
+---
+
+background-image: url(src/img/metal-powerpoint-background.jpg)
 
 class: middle, center
 
-# Q&A
+<p style="font-size:4em;font-weight:bold">Q&A</p>
 
 
 
