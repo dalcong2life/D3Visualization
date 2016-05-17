@@ -100,7 +100,7 @@ class: middle, center
 </p>
 
 ???
-데이터 시각화의 시작은 18세기경 윌리엄 프레이페어라는 사람이 
+데이터 시각화의 시작은 18세기경 윌리엄 프레이페어라는 사람이 쓴 책에서<br> 
 현대의 막대그래프와 꺽은선 그래프와 유사한 형태의 그래프를 처음 사용했으며
 이후 영토 비율을 나타내는 방법으로 원그래프도 사용했습니다.<br>
 그 이후 많은 사람들에 의해서 다양한 형태의 차트들이 생겨났습니다. 
@@ -125,9 +125,9 @@ class: middle, center
 그림은 구글 N그램 뷰어라는 서비스에서 'data visualization', '빅데이터', '인포그래픽'으로 검색한 내용인데<br>
 데이터 시각화란 용어가 언제부터 사용되기 시작했는지를 보여주고 있습니다.<br>
 1980년대 초부터 사용하기 시작해서 꾸준하게 증가되는것을 확인할 수 있습니다.<br>
-이는 최근 데이터 시각화의 부각이 단순히 데이터 증가로 인한 반짝 이슈거리가 아니라 과거 부터 데이터 시각화는 
-효과적인 활용 도구로 이용되고 있었습니다.<br>
-많은 데이터를 표현할수 있고 빠른 결정이 필요한 요즘 데이터 시각화는 필수 요소가 된거 같습니다.
+이는 최근 데이터 시각화의 부각이 단순히 데이터 증가로 인한 트렌드가 아니고 과거 부터 꾸준이 연구되고 데이터 분석에 효과적인 도구로 
+사용되고 있었습니다. <br>
+많은 데이터를 함축적으로 표현할수 있고 빠른 결정이 필요한 요즘 데이터 시각화가 더 중요하게 된것은 사실인거 같습니다.
 
 
 ---
@@ -153,7 +153,8 @@ class: middle, center
 ???
 데이터 시각화가 이렇게 중요해진 이유는 기본적으로 사람의 감각 중 눈은 <br>
 다른 기관보다 정보를 처리하 할 수 있는 대역폭과 처리 능력이 더  큽니다.<br>
-현대사회처럼 먼가 더 빠른 결정을 해야되는 상황이라면 데이터 시각화만한 것이 없을 겁니다.
+단순 텍스트 형식으로 되어 있는 정보를 분석하는 거 보다 시각화된 데이터 분석은 
+인간의 가장 강력한 지각 능력을 최대한 효과적으로 활용하는 방법입니다.
  
 
 ---
@@ -240,11 +241,16 @@ class: middle, center
 
 .footnote[http://3.bp.blogspot.com/_LCqDL30ndZQ/TBPkvZIQaNI/AAAAAAAAAik/OrjA6TShNsk/s1600/INFO-BALLENA.jpg]
 
+
+???
+참고래에 대한 소개를 인포그래픽으로 나타내고 있습니다.<br>
+참고래에 대한 설명과 함께 하단에 참고래 출몰지역, 크기, 먹이등 참고래에 대한 다양한 내용을 한 화면에 잘 설명하고 있습니다.
+
 ---
 
 ### 탐색 도구
 <p>- 데이터 셋을 직접 탐색해 보고 의미를 파악할 수 있는 상호작용 가능한 도구를 제공</p>
-<p>- <a href"http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen/transcript?language=en">
+<p>- <a href="http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen?language=en">
 한스 로스링(Hans Rosling)의 시각화(TED 영상)</a></p>
 
 <p style="text-align:center">
@@ -521,7 +527,7 @@ X축은 라벨과 같은 이산적인 값 또는 월별 분기별 같은 등간�
     <img style="width:100%" src="src/img/parallelchart.png"/>
     </span>
     <span style="width:50%;float:left;">
-    <img style="width:100%" src="src/img/radarchart.png"/>
+    <img style="width:90%" src="src/img/radarchart.png"/>
     </span>
 </span>
 </p>
@@ -562,7 +568,7 @@ X축은 라벨과 같은 이산적인 값 또는 월별 분기별 같은 등간�
     <img style="width:100%" src="src/img/piechart1.png"/>
     </span>
     <span style="width:50%;float:left;">
-    <img style="width:100%" src="src/img/piechart2.png"/>
+    <img style="width:90%" src="src/img/piechart2.png"/>
     </span>
 </span>
 </p>
@@ -572,7 +578,7 @@ X축은 라벨과 같은 이산적인 값 또는 월별 분기별 같은 등간�
 
 ---
 
-### 상자 수염 그림(Box-Whisker's Plot)
+### 상자 그림(Box-Whisker's Plot)
 
 <p>- 최솟값, 1사분위, 중앙값, 3사분위, 최대값을 동시에 표현할 수 있는 그래프</p>
 <p>- 데이터 분포를 표현하고 중앙값의 위치에 따라 분포 형태도 파악 가능  
@@ -696,17 +702,17 @@ X축과 Y축에 다른 데이터 변수를 할당함으로써 두 데이터 변�
 <p>- 관계성 파악에는 원 또는 방사형 선택</p>
 <p>- 양적인 관계 파악은 사각형 형태 선택</p>
 
-
+<br>
 <p style="text-align:center">
 <span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:740px;text-align:center;">
     <span style="width:33%;float:left;">
     <img style="width:100%" src="src/img/circle-packing.png"/>
     </span>
     <span style="width:33%;float:left;">
-    <img style="width:100%" src="src/img/zoomable-sunburst.png"/>
+    <img style="width:98%" src="src/img/zoomable-sunburst.png"/>
     </span>
     <span style="width:34%;float:left;">
-    <img style="width:100%" src="src/img/partition-diagram.png"/>
+    <img style="width:83%" src="src/img/partition-diagram.png"/>
     </span>
 </span>
 </p>
@@ -817,12 +823,12 @@ class: middle, center
 
 
 <p style="text-align:center">
-<span style="display:inline-block;background:#eee;padding:10px 10px 10px 10px;width:737px;text-align:center;">
+<span style="display:inline-block;background:#eee;padding:10px 10px 10px 0px;width:737px;text-align:center;">
     <span style="width:50%;float:left;">
-    <img style="width:100%" src="src/img/3d-circle-chart.png"/>
+    <img style="width:90%" src="src/img/3d-circle-chart.png"/>
     </span>
     <span style="width:50%;float:left;">
-    <img style="width:100%" src="src/img/3d-circle-chart-2.png"/>
+     <img style="width:100%" src="src/img/3d-circle-chart-2.png"/>
     </span>
 </span>
 </p>
@@ -878,6 +884,8 @@ class: middle, center
 마이크 보스톡
 - 2011년 D3.js 공식 발표
 - 2015년 시각화 도구 개발에 매진하기 위해 뉴욕타임즈 떠났다
+
+BSD 라이선스 = 추가 비용없이 비영리 또는 영리 목적으로 사용하거나 수정, 배포할 수 있다.
 
 
 
@@ -988,13 +996,13 @@ canvas 도 HTML 문서요소 중 하나로써 스크립트를 이용해서 그�
 
 ```xml
 <rect x="0" y="0" width="600" height="80" rx="20" ry="20"  
-                     fill="red" stroke="black" stroke-width="5" />
+                     fill="teal" stroke="black" stroke-width="2" />
 ```
 <div style="background-color:#eee;height:200px;">
 <svg width="748">
    <g width="700" transform="translate(25,60)">
    <rect x="0" y="0" width="700" height="80" rx="20" ry="20" 
-                    fill="red" stroke="black" stroke-width="5"  />
+                    fill="teal" stroke="black" stroke-width="2"  />
    </g>
 </svg>
 </div>
@@ -1010,12 +1018,12 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 ```xml
 <circle cx="100" cy="100" r="100" 
-                      fill="#0000ff" stroke="black" stroke-width="5" />
+                      fill="#40718B" stroke="black" stroke-width="2" />
 ```
 <div style="background-color:#eee;height:320px;">
 <svg width="748" height="500">
    <g transform="translate(250,50)">
-   <circle cx="100" cy="100" r="100" fill="#0000ff" stroke="black" stroke-width="5" />
+   <circle cx="100" cy="100" r="100" fill="#40718B" stroke="black" stroke-width="2" />
    </g>
 </svg>
 </div>
@@ -1025,13 +1033,13 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 ```xml
 <ellipse cx="100" cy="100" rx="200" ry="50" 
-                      fill="rgba(0, 255, 0, 0.5)" stroke="black" stroke-width="5" />
+                      fill="rgba(90, 123, 147, 0.8)" stroke="black" stroke-width="3" />
 ```
 <div style="background-color:#eee;height:320px;">
 <svg width="748" height="500">
    <g transform="translate(250,50)">
    <ellipse cx="100" cy="100" rx="200" ry="50" 
-                      fill="rgba(0, 255, 0, 0.5)" stroke="black" stroke-width="5" />
+                      fill="rgba(90, 123, 147, 0.8)" stroke="black" stroke-width="3" />
    <line x1="-200" y1="100" x2="400" y2="100" stroke="black"/>
    <line x1="100" y1="0" x2="100" y2="200" stroke="black"/>
    <text x="305" y="100">rx</text>
@@ -1066,13 +1074,13 @@ SVG 시각 요소의 기본 스타일은 외곽선이 없고 바탕이 검은색
 
 ```xml
 <polygon points="200,10 250,190 160,210" 
-                      style="fill:lime;stroke:purple;stroke-width:2" />
+                      style="fill:rgb(221,160,97);stroke:purple;stroke-width:2" />
 ```
 <div style="background-color:#eee;height:320px;">
 <svg width="748" height="500">
    <g transform="translate(100,50)">
    <polygon points="200,10 250,190 160,210" 
-                      style="fill:lime;stroke:purple;stroke-width:2" />
+                      style="fill:rgb(221,160,97);stroke:purple;stroke-width:2" />
    </g>
 </svg> 
 </div>
@@ -1178,10 +1186,23 @@ D3에서는 path를 쉽게 다룰 수 있도록 하는 메소드를 제공합니
 
 ### D3 동작 순서
 
-<p>1. 데이터를 브라우저 메모리로 로딩(Loading)</p>
-<p>2. HTML 문서요소를 생성한 후 데이터와 바인딩(Binding)</p>
-<p>3. 개별 데이터를 토대로 문서요소의 속성을 지정(Transforming)</p>
-<p>4. 사용자 입력에 대한 반응으로 문서요소의 상태값 전이(Transitioning)</p>
+.left-column[
+
+<p style="text-align:center">
+    <img style="width:65%;margin-left:50px;" src="src/img/d3action.png"/>
+</p>
+
+]
+
+.right-column[
+<p style="margin-left:-50px;">1. 데이터를 브라우저 메모리로 로딩(Loading)</p>
+<p style="margin-left:-50px;margin-top:80px">2. HTML 문서요소를 생성한 후 데이터와 바인딩(Binding)</p>
+<p style="margin-left:-50px;margin-top:80px">3. 개별 데이터를 토대로 문서요소의 속성을 지정(Transforming)</p>
+<p style="margin-left:-50px;margin-top:80px">4. 사용자 입력에 대한 반응으로 문서요소의 상태값 전이(Transitioning)</p>
+
+]
+
+
 
 ---
 
@@ -1323,13 +1344,13 @@ svg.selectAll("rect")
 ]
 
 <svg width="700" height="500">
-    <circle cx="320" cy="200" r="100" fill="green" opacity="0.4"/>
-    <circle cx="420" cy="200" r="100" fill="red" opacity="0.4"/>
-    <text x="280" y="210" text-anchor="middle" style="font-family:sans-serif" fill="brown">enter</text>
-    <text x="370" y="210" text-anchor="middle" style="font-family:sans-serif" fill="brown">update</text>
-    <text x="460" y="210" text-anchor="middle" style="font-family:sans-serif" fill="brown">exit</text>
-    <text x="300" y="90" text-anchor="middle" style="font-family:sans-serif" >데이터</text>
-    <text x="440" y="90" text-anchor="middle" style="font-family:sans-serif" >DOM</text>
+    <circle cx="320" cy="200" r="140" fill="green" opacity="0.4"/>
+    <circle cx="460" cy="200" r="140" fill="red" opacity="0.4"/>
+    <text x="260" y="210" text-anchor="middle" style="font-family:sans-serif;font-weight:bold;" fill="brown">enter</text>
+    <text x="390" y="210" text-anchor="middle" style="font-family:sans-serif;font-weight:bold;" fill="brown">update</text>
+    <text x="520" y="210" text-anchor="middle" style="font-family:sans-serif;font-weight:bold;" fill="brown">exit</text>
+    <text x="310" y="50" text-anchor="middle" style="font-family:sans-serif;font-weight:bold;" >데이터</text>
+    <text x="460" y="50" text-anchor="middle" style="font-family:sans-serif;font-weight:bold;" >DOM</text>
     
 </svg>
 

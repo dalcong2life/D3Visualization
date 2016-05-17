@@ -40,7 +40,7 @@ var getEl = document.getElementById.bind(document);
 
 slideShow.on('beforeShowSlide', function (slide) {
     var currentPage = slide.getSlideIndex() + 1;
-    console.log("Show Slide:", currentPage);
+    //console.log("Show Slide:", currentPage);
     switch (currentPage) {
         case 1:
             ReactDOM.render(
@@ -129,7 +129,7 @@ slideShow.on('beforeShowSlide', function (slide) {
 slideShow.on('hideSlide', function (slide) {
     var currentPage = slide.getSlideIndex() + 1;
 
-    console.log("Hide Slide:", currentPage);
+    //console.log("Hide Slide:", currentPage);
 
     switch (currentPage) {
         case 1:
