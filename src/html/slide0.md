@@ -125,9 +125,14 @@ class: middle, center
 그림은 구글 N그램 뷰어라는 서비스에서 'data visualization', '빅데이터', '인포그래픽'으로 검색한 내용인데<br>
 데이터 시각화란 용어가 언제부터 사용되기 시작했는지를 보여주고 있습니다.<br>
 1980년대 초부터 사용하기 시작해서 꾸준하게 증가되는것을 확인할 수 있습니다.<br>
-이는 최근 데이터 시각화의 부각이 단순히 데이터 증가로 인한 트렌드가 아니고 과거 부터 꾸준이 연구되고 데이터 분석에 효과적인 도구로 
+이는 최근 데이터 시각화가 뜨는 이유가 단순히 데이터 증가로 인한 트렌드가 아니고<br>
+과거 부터 꾸준이 연구되고 데이터 분석에 효과적인 도구로 
 사용되고 있었습니다. <br>
-많은 데이터를 함축적으로 표현할수 있고 빠른 결정이 필요한 요즘 데이터 시각화가 더 중요하게 된것은 사실인거 같습니다.
+<br>
+최근은 빅데이터를 가지고 사람들과 소통할 수 있는 기회가 많아 졌기때문에 이런 효율적인 소통을 위해 
+데이터 시각화가 더 중요하게 된것 같습니다.
+
+최근에는 많은 데이터를 함축적으로 표현할수 있고 빠른 결정이 필요한 요즘 데이터 시각화가 더 중요하게 된것은 사실인거 같습니다.
 
 
 ---
@@ -266,8 +271,8 @@ class: middle, center
 ???
 다양한 형태의 데이터 셋을 사용자가 직접 탐색해 가면서 의미있는 정보를 파악하거나 가설을 세울 수 있는
 도구를 제공합니다.<br>
-그림은 갭마인더 프로젝트로 200년간 축척된 국가별 부와 건강 데이터등을 가지고 여러방면으로 의미를 파악할 수
-있는 툴입니다. 
+그림은 갭마인더 프로젝트로써 200년간 축척된 국가별 부와 건강 데이터등을 가지고 여러방면으로 의미를 탐색해가며 분석해 볼 수 있는 
+툴을 제공하고 있습니다. 
 
 
 ---
@@ -1130,6 +1135,9 @@ D3에서는 path를 쉽게 다룰 수 있도록 하는 메소드를 제공합니
 </svg> 
 </div>
 
+<p>- 디센더(Descender) 잘림 주의</p>
+<img style="width:65%;" src="src/img/Descender.png"/>
+
 ---
 
 
@@ -1872,6 +1880,48 @@ force.on("tick", function() { // 매 순각(tick)마다 노드, 연결선의 x, 
 
 ---
 
+### D3 확장 라이브러리
+
+<table>
+<thead>
+<tr style="height:35px">
+    <th>D3 확장 라이브러리</th>
+    <th>URL</th>
+</tr>
+</thead>
+<tbody>
+    <tr style="height:60px">
+        <td>dc.js</td>
+        <td>http://nickqizhu.github.io/dc.js</td>
+    </tr>
+    <tr style="height:60px">
+        <td>rickshaw</td>
+        <td>http://code.shutterstock.com/rickshaw</td>
+    </tr>
+    <tr style="height:60px">
+        <td>Cubism.js</td>
+        <td>http://square.github.io/cubism/</td>
+    </tr>
+    <tr style="height:60px">
+        <td>C3.js</td>
+        <td>http://c3js.org/</td>
+    </tr>
+    <tr style="height:60px">
+        <td>Crossfilter</td>
+        <td>http://square.github.io/crossfilter/</td>
+    </tr>
+    <tr style="height:60px">
+        <td>NVD3</td>
+        <td>http://nvd3.org</td>
+    </tr>
+</tbody>
+</table>
+
+<img style="width:80%" src="src/img/dcjs.png"/>
+
+
+---
+
 class: middle, center
 
 <p class="highlight">
@@ -1888,7 +1938,7 @@ class: middle, center
 
 ---
 
-### 참고한 자료
+### ▣ 참고한 자료
 
 <p>■ 엔지니어를 위한 데이터 시각화 (한빛리더스)</p>
 <p>■ D3.js 실시간 데이터 시각화 (에어콘출판)</p>
@@ -1898,7 +1948,7 @@ class: middle, center
 
 <p>&nbsp;</p>
 
-### 발표자료에 사용된 라이브러리
+### ▣ 발표자료에 사용된 라이브러리
 <p>■ remark.js (http://remarkjs.com/)</p>
 <p>■ d3.js (https://d3js.org/)</p>
 <p>■ react (https://facebook.github.io/react/)</p>
